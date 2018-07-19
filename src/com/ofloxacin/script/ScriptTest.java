@@ -1,5 +1,7 @@
 package com.ofloxacin.script;
 
+import com.ofloxacin.TimeSpanUtil;
+
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
@@ -11,8 +13,9 @@ import java.util.*;
  */
 public class ScriptTest {
     private static ScriptEngine jse = new ScriptEngineManager().getEngineByName("JavaScript");
-
+    private static int MAX_COUNT = 10000;
     public static void main(String[] args) {
+        TimeSpanUtil.init();
         Expression.Node length = new Expression.Node("length", "长", "300", null, null);
         Expression.Node width = new Expression.Node("width", "宽", "200", null, null);
         Expression.Node height = new Expression.Node("height", "高", "100", null, null);
@@ -21,8 +24,11 @@ public class ScriptTest {
         Expression.Node node = new Expression.Node("knife_fee", "刀版费", null, "$[bolang]+$[zhidao]", Arrays.asList(bolang, zhidao));
 
         Set<Expression.Node> result = new HashSet<>();
-        System.out.println(eval(node, result));
-        System.out.println();
+        //eval(node, result);
+        System.out.println(eval(height, result));
+        System.out.println(eval(bolang, result));
+
+        TimeSpanUtil.printSpan();
     }
 
     public static String eval(Expression.Node node, Set<Expression.Node> result) {
