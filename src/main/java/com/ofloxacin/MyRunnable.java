@@ -19,13 +19,13 @@ public class MyRunnable implements Runnable {
         }
 
         synchronized (this) {
-            for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println(Thread.currentThread().getName() + ":bottom " + i);
+                System.out.println(Thread.currentThread().getName() + ":bottom " + j);
             }
         }
     }
