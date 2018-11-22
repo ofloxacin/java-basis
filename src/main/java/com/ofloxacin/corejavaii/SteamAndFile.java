@@ -20,7 +20,7 @@ public class SteamAndFile {
         File file = new File(path);
         List<Integer> results = new LinkedList<>();
         try {
-            InputStream inputStream = new FileInputStream(file);
+            InputStream inputStream = new BufferedInputStream(new FileInputStream(file));
             byte buffer[] = new byte[4];
             while (inputStream.read(buffer, 0, 1) > 0) {
                 byte data = buffer[0];
@@ -30,6 +30,7 @@ public class SteamAndFile {
                     continue;
                 }
 
+                inputStream.mark(4);
                 Integer temp = 0;
                 if (inputStream.read(buffer, 1, count - 1) == count - 1) {
                     buffer[0] = (byte) (buffer[0] & (0b0111111 >> (count - 1)));
@@ -40,7 +41,9 @@ public class SteamAndFile {
                         temp = temp | buffer[i];
                     }
                 } else {
-                    throw new IllegalArgumentException("不是标准的utf-8文件");
+                    //throw new IllegalArgumentException("不是标准的utf-8文件");
+                    temp = (int) buffer[0];
+                    inputStream.reset();
                 }
                 results.add(temp);
                 buffer = new byte[4];
