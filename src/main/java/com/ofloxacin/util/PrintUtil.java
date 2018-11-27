@@ -7,7 +7,11 @@ import com.alibaba.fastjson.JSON;
  * @date 2018/11/9 11:53
  */
 public class PrintUtil {
-    public static void print(String s) {
+    public static void print(Object o) {
+        System.out.println(o.toString());
+    }
+
+    public static void printString(String s) {
         System.out.println(s);
     }
 
