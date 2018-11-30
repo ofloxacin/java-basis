@@ -36,7 +36,7 @@ public class TimeSpanUtil {
                 String.format("%3d", number).replace(" ", "0") +
                 "): " +
                 span +
-                "s  total: " + totalSpan / 1000F;
+                "s  total: " + totalSpan / 1000F + "s ";
         System.out.println(msg);
     }
 
@@ -47,7 +47,7 @@ public class TimeSpanUtil {
                 String.format("%3d", number).replace(" ", "0") +
                 "): " +
                 span +
-                "s  total: " + totalSpan / 1000F + " " + message;
+                "s  total: " + totalSpan / 1000F + "s " + message;
         System.out.println(msg);
     }
 }
