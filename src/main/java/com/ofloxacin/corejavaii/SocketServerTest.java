@@ -22,6 +22,15 @@ public class SocketServerTest {
                     PrintWriter printWriter = new PrintWriter(outputStream, true);
                     String name = scanner.nextLine();
                     printWriter.println("Welcome " + name);
+
+                    boolean exit = false;
+                    while (!exit && scanner.hasNextLine()) {
+                        String message = scanner.nextLine();
+                        printWriter.println("Echo:" + message);
+                        if (message.trim().equalsIgnoreCase("BYE")) {
+                            exit = true;
+                        }
+                    }
                 }
             }
         }

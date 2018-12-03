@@ -23,8 +23,19 @@ public class SocketClientTest {
             try (Scanner scanner = new Scanner(inputStream)) {
                 PrintWriter writer = new PrintWriter(outputStream, true);
                 writer.println("aspirin");
-                String message = scanner.nextLine();
-                System.out.println(message);
+
+                Thread thread = new Thread(() -> {
+                    Scanner sin = new Scanner(System.in);
+                    while (!socket.isClosed() && sin.hasNextLine()) {
+                        writer.println(sin.nextLine());
+                    }
+                });
+                thread.start();
+
+                while (!socket.isClosed() && scanner.hasNextLine()) {
+                    String message = scanner.nextLine();
+                    System.out.println(message);
+                }
             }
         }
     }
