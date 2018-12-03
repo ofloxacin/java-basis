@@ -14,22 +14,21 @@ import java.util.Scanner;
  */
 public class SocketServerTest {
     public static void main(String[] args) throws IOException {
-        try (ServerSocket serverSocket = new ServerSocket(8189)) {
-            try (Socket socket = serverSocket.accept()) {
-                InputStream inputStream = socket.getInputStream();
-                OutputStream outputStream = socket.getOutputStream();
-                try (Scanner scanner = new Scanner(inputStream)) {
-                    PrintWriter printWriter = new PrintWriter(outputStream, true);
-                    String name = scanner.nextLine();
-                    printWriter.println("Welcome " + name);
+        try (ServerSocket serverSocket = new ServerSocket(8189);
+             Socket socket = serverSocket.accept()) {
+            InputStream inputStream = socket.getInputStream();
+            OutputStream outputStream = socket.getOutputStream();
+            try (Scanner scanner = new Scanner(inputStream);
+                 PrintWriter printWriter = new PrintWriter(outputStream, true)) {
+                String name = scanner.nextLine();
+                printWriter.println("Welcome " + name);
 
-                    boolean exit = false;
-                    while (!exit && scanner.hasNextLine()) {
-                        String message = scanner.nextLine();
-                        printWriter.println("Echo:" + message);
-                        if (message.trim().equalsIgnoreCase("BYE")) {
-                            exit = true;
-                        }
+                boolean exit = false;
+                while (!exit && scanner.hasNextLine()) {
+                    String message = scanner.nextLine();
+                    printWriter.println("Echo:" + message);
+                    if (message.trim().equalsIgnoreCase("BYE")) {
+                        exit = true;
                     }
                 }
             }

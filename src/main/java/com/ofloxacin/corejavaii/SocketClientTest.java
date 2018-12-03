@@ -20,8 +20,8 @@ public class SocketClientTest {
             socket.connect(socketAddress, 5000);
             InputStream inputStream = socket.getInputStream();
             OutputStream outputStream = socket.getOutputStream();
-            try (Scanner scanner = new Scanner(inputStream)) {
-                PrintWriter writer = new PrintWriter(outputStream, true);
+            try (Scanner scanner = new Scanner(inputStream);
+                 PrintWriter writer = new PrintWriter(outputStream, true)) {
                 writer.println("aspirin");
 
                 Thread thread = new Thread(() -> {
