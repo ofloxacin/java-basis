@@ -8,7 +8,8 @@ import com.alibaba.fastjson.JSON;
  */
 public class PrintUtil {
     public static void print(Object o) {
-        System.out.println(o.toString());
+        String s = o == null ? "null" : o.toString();
+        System.out.println(s);
     }
 
     public static void printString(String s) {
