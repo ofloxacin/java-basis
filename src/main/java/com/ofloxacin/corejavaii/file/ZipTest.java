@@ -1,4 +1,4 @@
-package com.ofloxacin.corejavaii;
+package com.ofloxacin.corejavaii.file;
 
 import java.io.IOException;
 import java.nio.file.*;

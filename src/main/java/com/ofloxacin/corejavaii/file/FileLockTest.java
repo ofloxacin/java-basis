@@ -1,4 +1,4 @@
-package com.ofloxacin.corejavaii;
+package com.ofloxacin.corejavaii.file;
 
 import com.ofloxacin.util.PrintUtil;
 

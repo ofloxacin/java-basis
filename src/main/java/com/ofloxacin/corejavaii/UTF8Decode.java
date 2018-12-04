@@ -10,7 +10,7 @@ import java.util.List;
  * @author chens
  * @date 2018/11/22 10:39
  */
-public class SteamAndFile {
+public class UTF8Decode {
     public static void main(String[] args) {
         String path = "D:\\Library\\Desktop\\t.txt";
         PrintUtil.printJson(getCode(path));

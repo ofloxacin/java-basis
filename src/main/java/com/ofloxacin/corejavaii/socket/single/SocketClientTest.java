@@ -1,4 +1,4 @@
-package com.ofloxacin.corejavaii;
+package com.ofloxacin.corejavaii.socket.single;
 
 import java.io.IOException;
 import java.io.InputStream;
