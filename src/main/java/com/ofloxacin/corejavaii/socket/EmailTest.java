@@ -24,10 +24,10 @@ public class EmailTest {
 
         Session mailSession = Session.getDefaultInstance(props);
         MimeMessage message = new MimeMessage(mailSession);
-        message.setFrom(new InternetAddress("chenshuai1992@qq.com"));
+        message.setFrom(new InternetAddress(props.getProperty("mail.from")));
         message.addRecipients(Message.RecipientType.TO, "729889948@qq.com");
-        message.setSubject("测试邮件标题", "UTF-8");
-        message.setText("这是一封测试邮件", "UTF-8");
+        message.setSubject("测试邮件标题");
+        message.setText("这是一封测试邮件");
 
         Transport transport = mailSession.getTransport();
         transport.connect(null, password);
