@@ -12,6 +12,7 @@ import java.util.Scanner;
  */
 public class SSLTest {
     public static void main(String[] args) throws IOException {
+        //VM options, -Djavax.net.debug=all
         final String url = "https://www.baidu.com/";
         URL realUrl = new URL(url);
         URLConnection connection = realUrl.openConnection();
