@@ -9,6 +9,7 @@ import java.util.List;
  * @date 2018/6/21 19:14
  */
 public class ArrayListTest {
+
     public static void main(String[] args) {
         List<String> strings = new ArrayList<>();
         strings.add("1");
@@ -23,7 +24,7 @@ public class ArrayListTest {
 
     public static void subListError(List<String> strings) {
         try {
-            ArrayList<String> subList = (ArrayList<String>)strings.subList(0, 2);
+            ArrayList<String> subList = (ArrayList<String>) strings.subList(0, 2);
             System.out.println(subList);
         } catch (ClassCastException e) {
             e.printStackTrace();

@@ -3,15 +3,23 @@ package com.ofloxacin.corejavaii.serial;
 import com.ofloxacin.util.PrintUtil;
 
 import java.awt.geom.Point2D;
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 /**
  * @author chens
  * @date 2018/12/3 14:50
  */
 public class SerializationTest implements Serializable {
+
     private static final long serialVersionUID = 3229707741225041687L;
+
     private String name;
+
     private transient Point2D.Double point;
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {

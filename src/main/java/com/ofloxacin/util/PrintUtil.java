@@ -7,6 +7,7 @@ import com.alibaba.fastjson.JSON;
  * @date 2018/11/9 11:53
  */
 public class PrintUtil {
+
     public static void print(Object o) {
         String s = o == null ? "null" : o.toString();
         System.out.println(s);

@@ -12,6 +12,7 @@ import java.nio.file.Paths;
  * @date 2018/11/26 14:24
  */
 public class PathTest {
+
     public static void main(String[] args) {
         Path path = Paths.get("D:\\temp\\weather\\summer");
         PrintUtil.print(path.resolve("session"));

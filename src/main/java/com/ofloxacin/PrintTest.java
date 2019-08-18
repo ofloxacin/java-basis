@@ -5,6 +5,7 @@ package com.ofloxacin;
  * @date 2019/4/11 20:54
  */
 public class PrintTest {
+
     public static void main(String[] args) throws InterruptedException {
         int MAX = 1000000000;
         int i = 0;

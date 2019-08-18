@@ -9,8 +9,9 @@ import java.util.List;
  * @date 2018/6/21 18:52
  */
 public class ArrayTest {
+
     public static void main(String[] args) {
-        List<String> stringList = Arrays.asList("1","2");
+        List<String> stringList = Arrays.asList("1", "2");
         String[] strArray = (String[]) stringList.toArray();
         for (String s : strArray) {
             System.out.print(s);
@@ -25,7 +26,6 @@ public class ArrayTest {
         }
         System.out.println();
         System.out.flush();
-
 
         List<String> stringList2 = new ArrayList<>();
         stringList2.add("3");

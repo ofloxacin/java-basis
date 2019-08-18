@@ -5,15 +5,20 @@ import com.ofloxacin.TimeSpanUtil;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author ChenShuai
  * @date 2018/7/9 17:45
  */
 public class ScriptTest {
+
     private static ScriptEngine jse = new ScriptEngineManager().getEngineByName("JavaScript");
+
     private static int MAX_COUNT = 10000;
+
     public static void main(String[] args) {
         TimeSpanUtil.init();
         Expression.Node length = new Expression.Node("length", "长", "300", null, null);

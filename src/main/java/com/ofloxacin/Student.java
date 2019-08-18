@@ -10,8 +10,11 @@ import java.util.Objects;
 public class Student implements Serializable, Cloneable {
 
     private static final long serialVersionUID = -1722535715065018711L;
+
     private String name;
+
     private transient Integer age;
+
     private Student student;
 
     public Student() {
@@ -24,6 +27,11 @@ public class Student implements Serializable, Cloneable {
     }
 
     @Override
+    public int hashCode() {
+        return Objects.hash(name, age);
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -33,8 +41,8 @@ public class Student implements Serializable, Cloneable {
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(name, age);
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 
     @Override
@@ -44,11 +52,6 @@ public class Student implements Serializable, Cloneable {
                 ", age=" + age +
                 ", student=" + student +
                 '}';
-    }
-
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
     }
 
     public String getName() {

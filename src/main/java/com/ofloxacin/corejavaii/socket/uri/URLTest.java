@@ -10,6 +10,7 @@ import java.util.Scanner;
  * @date 2018/12/4 13:59
  */
 public class URLTest {
+
     public static void main(String[] args) throws IOException {
         URL url = new URL("http://www.baidu.com/");
         System.out.println(url.getAuthority());

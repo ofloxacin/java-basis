@@ -5,6 +5,7 @@ package com.ofloxacin;
  * @date 2018/6/21 18:22
  */
 public class CloneTest {
+
     public static void main(String[] args) {
         Student student = new Student("chenshuai", 123);
         student.setStudent(new Student("second", 99));

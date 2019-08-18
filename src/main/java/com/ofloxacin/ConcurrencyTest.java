@@ -5,6 +5,7 @@ package com.ofloxacin;
  * @date 2018/6/19 13:40
  */
 public class ConcurrencyTest {
+
     private static final long COUNT = 100000001;
 
     public static void main(String[] args) throws InterruptedException {

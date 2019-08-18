@@ -16,6 +16,7 @@ import java.util.Scanner;
  * @date 2018/12/4 20:00
  */
 public class URLPostTest {
+
     public static void main(String[] args) throws IOException {
         Properties properties = new Properties();
         InputStream inputStream = Object.class.getResourceAsStream("/setting.properties");

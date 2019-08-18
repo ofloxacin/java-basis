@@ -11,6 +11,7 @@ import java.util.Scanner;
  * @date 2018/12/3 18:38
  */
 public class SocketTest {
+
     public static void main(String[] args) throws IOException {
         InetAddress inetAddress = InetAddress.getByName("time-A.timefreq.bldrdoc.gov");
         System.out.println(inetAddress.getAddress()[0] & 0xff);

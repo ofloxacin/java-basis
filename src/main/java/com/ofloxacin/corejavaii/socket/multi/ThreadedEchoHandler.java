@@ -12,6 +12,7 @@ import java.util.Scanner;
  * @date 2018/12/4 10:34
  */
 public class ThreadedEchoHandler implements Runnable {
+
     private Socket socket;
 
     public ThreadedEchoHandler(Socket socket) {

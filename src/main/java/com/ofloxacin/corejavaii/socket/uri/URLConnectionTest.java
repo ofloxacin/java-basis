@@ -15,6 +15,7 @@ import java.util.Scanner;
  * @date 2018/12/4 14:27
  */
 public class URLConnectionTest {
+
     public static void main(String[] args) throws IOException {
         URL url = new URL("http://localhost:8080");
         URLConnection connection = url.openConnection();
@@ -48,10 +49,10 @@ public class URLConnectionTest {
         }
         return bOut.toString();
     }
-
 }
 
 class Base64OutputStream extends FilterOutputStream {
+
     private static final char[] toBase64 = {
             'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
             'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
@@ -59,8 +60,11 @@ class Base64OutputStream extends FilterOutputStream {
             'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
             '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '/'
     };
+
     private int col = 0;
+
     private int i = 0;
+
     private int[] inbuf = new int[3];
 
     public Base64OutputStream(OutputStream out) {

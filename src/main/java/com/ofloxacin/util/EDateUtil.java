@@ -10,6 +10,7 @@ import java.util.Date;
 public class EDateUtil {
 
     public static final String yyyyMMdd = "yyyyMMdd";
+
     public static final String yyyy_MM_dd = "yyyy-MM-dd";
 
     public static void main(String[] args) {

@@ -13,6 +13,7 @@ import java.util.Scanner;
  * @date 2018/12/3 19:05
  */
 public class SocketServerTest {
+
     public static void main(String[] args) throws IOException {
         try (ServerSocket serverSocket = new ServerSocket(8189);
              Socket socket = serverSocket.accept()) {

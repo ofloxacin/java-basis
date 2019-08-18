@@ -11,6 +11,7 @@ import java.util.Scanner;
  * @date 2019/2/21 14:38
  */
 public class SSLTest {
+
     public static void main(String[] args) throws IOException {
         //VM options, -Djavax.net.debug=all
         final String url = "https://www.baidu.com/";

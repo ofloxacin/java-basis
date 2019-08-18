@@ -14,6 +14,7 @@ import java.nio.file.StandardOpenOption;
  * @date 2018/11/30 17:39
  */
 public class FileLockTest {
+
     public static void main(String[] args) throws IOException {
         Path path = Paths.get("D:\\Library\\Desktop\\t.txt");
         FileChannel channel = FileChannel.open(path, StandardOpenOption.READ, StandardOpenOption.WRITE);

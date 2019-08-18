@@ -1,12 +1,21 @@
 package com.ofloxacin;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
 
 /**
  * @author ChenShuai
  * @date 2018/6/21 16:18
  */
 public class SerialTest {
+
     public static void main(String[] args) {
         String path = "./out/serialTest.stu";
         Student student = new Student("陈帅", 25);

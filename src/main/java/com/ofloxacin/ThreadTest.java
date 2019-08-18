@@ -9,6 +9,7 @@ import java.lang.management.ThreadMXBean;
  * @date 2018/6/26 18:16
  */
 public class ThreadTest {
+
     public static void main(String[] args) {
         ThreadMXBean threadMXBean = ManagementFactory.getThreadMXBean();
         ThreadInfo[] threadInfos = threadMXBean.dumpAllThreads(false, false);

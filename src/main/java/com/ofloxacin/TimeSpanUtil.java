@@ -5,8 +5,11 @@ package com.ofloxacin;
  * @date 2018/7/12 17:50
  */
 public class TimeSpanUtil {
+
     private static long dateStart;
+
     private static long number;
+
     private static long totalSpan;
 
     public static void init() {

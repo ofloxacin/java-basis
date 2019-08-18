@@ -15,6 +15,7 @@ import java.util.Scanner;
  * @date 2018/12/4 21:11
  */
 public class EmailTest {
+
     public static void main(String[] args) throws IOException, MessagingException {
         Properties props = new Properties();
         props.load(Object.class.getResourceAsStream("/email.properties"));

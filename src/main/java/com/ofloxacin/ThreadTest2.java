@@ -8,6 +8,7 @@ import java.util.List;
  * @date 2018/10/11 14:38
  */
 public class ThreadTest2 {
+
     public static void main(String[] args) {
         Runnable runnable = new MyRunnable();
         List<Thread> threadList = new ArrayList<>();

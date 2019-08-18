@@ -20,6 +20,7 @@ import java.util.zip.CRC32;
  * @date 2018/11/28 18:17
  */
 public class FileChannelTest {
+
     public static void main(String[] args) throws IOException {
         Path path = Paths.get("C:\\Program Files\\Java\\jdk1.8.0_191\\jre\\lib\\charsets.jar");
         TimeSpanUtil.init();

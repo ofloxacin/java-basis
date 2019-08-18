@@ -14,6 +14,7 @@ import java.util.Scanner;
  * @date 2018/12/3 19:10
  */
 public class SocketClientTest {
+
     public static void main(String[] args) throws IOException {
         try (Socket socket = new Socket()) {
             SocketAddress socketAddress = new InetSocketAddress(8189);

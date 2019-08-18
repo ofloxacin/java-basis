@@ -12,6 +12,8 @@ import java.io.Serializable;
 @Getter
 @Setter
 public class SerialBase implements Serializable {
+
     private static final long serialVersionUID = -7078416769668318459L;
+
     protected Integer a;
 }

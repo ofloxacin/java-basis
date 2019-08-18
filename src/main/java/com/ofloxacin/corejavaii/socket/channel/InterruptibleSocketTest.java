@@ -16,6 +16,7 @@ import java.util.Scanner;
  * @date 2018/12/4 11:05
  */
 public class InterruptibleSocketTest {
+
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             JFrame frame = new InterruptibleSocketFrame();
@@ -28,15 +29,23 @@ public class InterruptibleSocketTest {
 }
 
 class InterruptibleSocketFrame extends JFrame {
+
     public static final int TEXT_ROWS = 20;
+
     public static final int TEXT_COLUMNS = 60;
 
     private Scanner in;
+
     private JButton interruptibleButton;
+
     private JButton blockingButton;
+
     private JButton cancelButton;
+
     private JTextArea messages;
+
     private TestServer server;
+
     private Thread connectThread;
 
     public InterruptibleSocketFrame() {
@@ -129,6 +138,7 @@ class InterruptibleSocketFrame extends JFrame {
     }
 
     class TestServer implements Runnable {
+
         @Override
         public void run() {
             try {
@@ -145,7 +155,9 @@ class InterruptibleSocketFrame extends JFrame {
     }
 
     class TestServerHandler implements Runnable {
+
         private Socket incoming;
+
         private int counter;
 
         public TestServerHandler(Socket incoming) {

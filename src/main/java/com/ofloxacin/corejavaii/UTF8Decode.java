@@ -2,7 +2,12 @@ package com.ofloxacin.corejavaii;
 
 import com.ofloxacin.util.PrintUtil;
 
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -11,6 +16,7 @@ import java.util.List;
  * @date 2018/11/22 10:39
  */
 public class UTF8Decode {
+
     public static void main(String[] args) {
         String path = "D:\\Library\\Desktop\\t.txt";
         PrintUtil.printJson(getCode(path));

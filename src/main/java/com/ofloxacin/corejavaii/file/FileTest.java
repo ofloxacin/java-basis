@@ -1,7 +1,13 @@
 package com.ofloxacin.corejavaii.file;
 
 import java.io.IOException;
-import java.nio.file.*;
+import java.nio.file.DirectoryStream;
+import java.nio.file.FileVisitOption;
+import java.nio.file.FileVisitResult;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.Collections;
 
@@ -10,17 +16,13 @@ import java.util.Collections;
  * @date 2018/11/28 16:29
  */
 public class FileTest {
+
     public static void main(String[] args) {
         try {
             Files.walkFileTree(Paths.get("D:\\"), Collections.singleton(FileVisitOption.FOLLOW_LINKS), 3, new SimpleFileVisitor<Path>() {
                 @Override
                 public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
                     return super.preVisitDirectory(dir, attrs);
-                }
-
-                @Override
-                public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
-                    return super.postVisitDirectory(dir, exc);
                 }
 
                 @Override
@@ -39,6 +41,11 @@ public class FileTest {
                 @Override
                 public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {
                     return FileVisitResult.CONTINUE;
+                }
+
+                @Override
+                public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+                    return super.postVisitDirectory(dir, exc);
                 }
             });
         } catch (IOException e) {

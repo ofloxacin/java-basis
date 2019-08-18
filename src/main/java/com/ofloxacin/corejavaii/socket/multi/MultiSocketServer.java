@@ -8,6 +8,7 @@ import java.net.Socket;
  * @date 2018/12/4 10:42
  */
 public class MultiSocketServer {
+
     public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(8189);

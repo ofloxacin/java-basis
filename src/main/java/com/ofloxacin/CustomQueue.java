@@ -7,7 +7,9 @@ import java.util.Stack;
  * @date 2018/6/12 9:26
  */
 public class CustomQueue {
+
     private Stack<Object> s1 = new Stack<Object>();
+
     private Stack<Object> s2 = new Stack<Object>();
 
     public void add(Object o) {

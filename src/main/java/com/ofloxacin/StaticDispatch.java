@@ -5,6 +5,7 @@ package com.ofloxacin;
  * @date 2018/11/28 15:11
  */
 public class StaticDispatch {
+
     public static void main(String[] args) {
         StaticDispatch dispatch = new StaticDispatch();
         Human man = new Man();
@@ -26,6 +27,7 @@ public class StaticDispatch {
     }
 
     static abstract class Human {
+
     }
 
     static class Man extends Human {

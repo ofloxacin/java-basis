@@ -7,6 +7,7 @@ import java.util.Properties;
  * @date 2018/12/4 10:29
  */
 public class PropertiesTest {
+
     public static void main(String[] args) {
         Properties properties = System.getProperties();
         properties.list(System.out);

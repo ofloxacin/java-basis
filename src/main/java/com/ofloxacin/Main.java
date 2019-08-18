@@ -1,20 +1,24 @@
 package com.ofloxacin;
 
 import java.util.Random;
-import java.util.concurrent.*;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author ChenShuai
  * @date 2018/6/12 9:22
  */
 public class Main {
+
     public static void main(String[] args) {
         final CustomQueue customQueue = new CustomQueue();
         final int MAX_COUNT = 100;
 
         BlockingQueue<Runnable> workingQueue = new ArrayBlockingQueue<Runnable>(10);
 
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(2 ,5, 100, TimeUnit.SECONDS, workingQueue);
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(2, 5, 100, TimeUnit.SECONDS, workingQueue);
         threadPoolExecutor.prestartAllCoreThreads();
 
         workingQueue.add(new Runnable() {

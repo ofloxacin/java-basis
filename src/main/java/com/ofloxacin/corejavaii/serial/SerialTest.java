@@ -4,7 +4,11 @@ import com.ofloxacin.util.PrintUtil;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 /**
  * @author chens
@@ -13,7 +17,9 @@ import java.io.*;
 @Getter
 @Setter
 public class SerialTest extends SerialBase {
+
     private static final long serialVersionUID = -2624706092386320174L;
+
     private Integer b;
 
     public SerialTest(Integer a, Integer b) {

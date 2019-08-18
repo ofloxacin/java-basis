@@ -5,6 +5,7 @@ package com.ofloxacin;
  * @date 2018/10/11 14:39
  */
 public class MyRunnable implements Runnable {
+
     @Override
     public void run() {
         synchronized (this) {

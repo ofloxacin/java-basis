@@ -5,9 +5,12 @@ package com.ofloxacin;
  * @date 2018/6/19 17:00
  */
 public class DeadLockDemo {
+
     private static Object o1 = new Object();
+
     private static Object o2 = new Object();
-    public static void main(String [] args) {
+
+    public static void main(String[] args) {
         new DeadLockDemo().deadLock();
     }
 

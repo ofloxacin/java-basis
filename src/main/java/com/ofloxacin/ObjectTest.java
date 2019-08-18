@@ -10,6 +10,7 @@ import java.util.Objects;
  * @date 2018/6/21 14:59
  */
 public class ObjectTest {
+
     public static void main(String[] args) {
         Student s1 = new Student();
         Student s2 = new Student();

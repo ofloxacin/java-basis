@@ -1,12 +1,18 @@
 package com.ofloxacin.leetcode;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @author chens
  * @date 2018/11/9 14:02
  */
 public class P003_LongestSubstring {
+
     public static void main(String[] args) {
         System.out.println(lengthOfLongestSubstring3("abcabcbb"));
         System.out.println(lengthOfLongestSubstring3("bbbbb"));
