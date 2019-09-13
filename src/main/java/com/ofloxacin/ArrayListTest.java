@@ -16,9 +16,7 @@ public class ArrayListTest {
         strings.add("2");
         strings.add("3");
 
-        //TODO nihao
         subListError(strings);
-        //FIXME
         subListError2();
     }
 
