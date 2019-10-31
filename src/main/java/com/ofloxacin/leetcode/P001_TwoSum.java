@@ -1,6 +1,6 @@
 package com.ofloxacin.leetcode;
 
-import com.ofloxacin.util.PrintUtil;
+import com.alibaba.fastjson.JSON;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,22 +12,20 @@ import java.util.Map;
 public class P001_TwoSum {
 
     public static void main(String[] args) {
-        int[] numbers = new int[]{2, 7, 11, 15};
-        int target = 9;
-        int[] result = twoSum(numbers, target);
-        PrintUtil.printJson(result);
+        int[] nums = new int[]{2, 7, 0};
+        int[] result = twoSum(nums, 9);
+        System.out.println(JSON.toJSONString(result));
     }
 
-    public static int[] twoSum(int[] numbers, int target) {
-        Map<Integer, Integer> temp = new HashMap<>();
-        for (int i = 0; i < numbers.length; i++) {
-            int toFind = target - numbers[i];
-            if (temp.containsKey(toFind)) {
-                return new int[]{temp.get(toFind), i};
-            } else {
-                temp.put(numbers[i], i);
+    public static int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> cache = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            Integer j = cache.get(target - nums[i]);
+            if (j != null) {
+                return new int[]{j, i};
             }
+            cache.put(nums[i], i);
         }
-        throw new RuntimeException("None");
+        throw new RuntimeException("Could not found");
     }
 }
