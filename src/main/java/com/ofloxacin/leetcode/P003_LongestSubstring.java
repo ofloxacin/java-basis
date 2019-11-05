@@ -14,13 +14,32 @@ import java.util.Set;
 public class P003_LongestSubstring {
 
     public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstring3("abcabcbb"));
-        System.out.println(lengthOfLongestSubstring3("bbbbb"));
-        System.out.println(lengthOfLongestSubstring3("pwwkew"));
-        System.out.println(lengthOfLongestSubstring3("pq"));
+        System.out.println(lengthOfLongestSubstring("abcabcdbb"));
+        System.out.println(lengthOfLongestSubstring("bbbbb"));
+        System.out.println(lengthOfLongestSubstring("pwwkew"));
+        System.out.println(lengthOfLongestSubstring("pq"));
+        System.out.println(lengthOfLongestSubstring("abba"));
+        System.out.println(lengthOfLongestSubstring(" "));
     }
 
     public static int lengthOfLongestSubstring(String s) {
+        Map<Character, Integer> cache = new HashMap<>();
+        int max = 0, i = 0, j = 0;
+        for (; j < s.length(); j++) {
+            char c = s.charAt(j);
+            Integer index = cache.get(c);
+            if (index != null) {
+                max = j - i > max ? j - i : max;
+                for (; i < index + 1; i++) {
+                    cache.remove(s.charAt(i));
+                }
+            }
+            cache.put(c, j);
+        }
+        return j - i > max ? j - i : max;
+    }
+
+    public static int lengthOfLongestSubstring1(String s) {
         int maxLength = 0;
         Set<Character> container = new LinkedHashSet<>();
         for (int i = 0; i < s.length(); i++) {
