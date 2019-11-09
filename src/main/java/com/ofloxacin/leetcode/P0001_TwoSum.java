@@ -9,7 +9,7 @@ import java.util.Map;
  * @author ChenShuai
  * @date 2018/10/25 13:37
  */
-public class P001_TwoSum {
+public class P0001_TwoSum {
 
     public static void main(String[] args) {
         int[] nums = new int[]{2, 7, 0};

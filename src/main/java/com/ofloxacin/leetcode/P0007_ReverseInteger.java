@@ -7,7 +7,7 @@ package com.ofloxacin.leetcode;
  * @description
  * @date 2019/11/5
  */
-public class P007_ReverseInteger {
+public class P0007_ReverseInteger {
 
     public static void main(String[] args) {
         System.out.println(reverse1(123));

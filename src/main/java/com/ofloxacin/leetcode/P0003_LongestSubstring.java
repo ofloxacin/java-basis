@@ -11,7 +11,7 @@ import java.util.Set;
  * @author chens
  * @date 2018/11/9 14:02
  */
-public class P003_LongestSubstring {
+public class P0003_LongestSubstring {
 
     public static void main(String[] args) {
         System.out.println(lengthOfLongestSubstring("abcabcdbb"));
