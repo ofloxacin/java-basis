@@ -3,7 +3,7 @@ package com.ofloxacin.leetcode;
 /**
  * @author chenshuai
  * @version 0.1
- * @name P009_PalindromeNumber
+ * @name P0009_PalindromeNumber
  * @description
  * @date 2019/11/9
  */

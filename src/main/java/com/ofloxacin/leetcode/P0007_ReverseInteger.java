@@ -3,7 +3,7 @@ package com.ofloxacin.leetcode;
 /**
  * @author chenshuai
  * @version 0.1
- * @name P007_ReverseInteger
+ * @name P0007_ReverseInteger
  * @description
  * @date 2019/11/5
  */
