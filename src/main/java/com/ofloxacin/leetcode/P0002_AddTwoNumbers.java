@@ -1,5 +1,8 @@
 package com.ofloxacin.leetcode;
 
+import org.junit.Before;
+import org.junit.Test;
+
 /**
  * @author chenshuai
  * @version 0.1
@@ -9,16 +12,26 @@ package com.ofloxacin.leetcode;
  */
 public class P0002_AddTwoNumbers {
 
-    public static void main(String[] args) {
-        ListNode l1 = new ListNode(1);
+    private ListNode l1;
+
+    private ListNode l2;
+
+    @Before
+    public void init() {
+        l1 = new ListNode(1);
         l1.next = new ListNode(2);
-        ListNode l2 = new ListNode(9);
+        l2 = new ListNode(9);
         l2.next = new ListNode(8);
-        ListNode listNode = addTwoNumbers2(l1, l2);
-        while (listNode != null) {
-            System.out.print(listNode.val);
-            listNode = listNode.next;
-        }
+    }
+
+    @Test
+    public void addTwoNumbers() {
+        print(addTwoNumbers(l1, l2));
+    }
+
+    @Test
+    public void addTwoNumbers2() {
+        print(addTwoNumbers2(l1, l2));
     }
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -93,8 +106,16 @@ public class P0002_AddTwoNumbers {
         int val;
 
         ListNode next;
+
         ListNode(int x) {
             val = x;
+        }
+    }
+
+    private void print(ListNode listNode) {
+        while (listNode != null) {
+            System.out.print(listNode.val);
+            listNode = listNode.next;
         }
     }
 }

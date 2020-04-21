@@ -1,5 +1,7 @@
 package com.ofloxacin;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -10,7 +12,8 @@ import java.util.List;
  */
 public class ArrayTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         List<String> stringList = Arrays.asList("1", "2");
         String[] strArray = (String[]) stringList.toArray();
         for (String s : strArray) {

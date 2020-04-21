@@ -1,12 +1,15 @@
 package com.ofloxacin;
 
+import org.junit.Test;
+
 /**
  * @author ChenShuai
  * @date 2018/6/21 18:22
  */
 public class CloneTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void cloneTest() {
         Student student = new Student("chenshuai", 123);
         student.setStudent(new Student("second", 99));
 
