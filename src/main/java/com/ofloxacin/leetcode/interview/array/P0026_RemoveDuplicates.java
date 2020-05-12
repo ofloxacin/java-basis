@@ -8,7 +8,7 @@ import org.junit.Test;
  * @description
  * @date 2020-05-11
  */
-public class P001_RemoveDuplicates {
+public class P0026_RemoveDuplicates {
 
     @Test
     public void test() {

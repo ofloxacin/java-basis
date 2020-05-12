@@ -1,5 +1,6 @@
 package com.ofloxacin.leetcode.interview.array;
 
+import com.ofloxacin.util.PrintUtil;
 import org.junit.Test;
 
 /**
@@ -8,7 +9,7 @@ import org.junit.Test;
  * @description
  * @date 2020-05-11
  */
-public class P003_Rotate {
+public class P0189_Rotate {
 
     @Test
     public void test() {
@@ -16,14 +17,8 @@ public class P003_Rotate {
         int[] nums2 = new int[]{-1, -100, 3, 99};
         rotate(nums, 3);
         rotate(nums2, 2);
-        for (int num : nums) {
-            System.out.println(num);
-        }
-        System.out.println();
-        for (int num : nums2) {
-            System.out.println(num);
-        }
-        System.out.println();
+        PrintUtil.print(nums);
+        PrintUtil.print(nums2);
     }
 
     public void rotate(int[] nums, int k) {

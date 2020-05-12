@@ -8,7 +8,7 @@ import org.junit.Test;
  * @description
  * @date 2020-05-11
  */
-public class P003_MaxProfit {
+public class P0122_MaxProfit {
 
     @Test
     public void test() {
