@@ -20,6 +20,12 @@ public class PrintUtil {
         System.out.println(Arrays.stream(nums).mapToObj(Integer::toString).collect(Collectors.joining(",", "[", "]")));
     }
 
+    public static void print(int[][] nums) {
+        for (int[] num : nums) {
+            print(num);
+        }
+    }
+
     public static void printString(String s) {
         System.out.println(s);
     }
