@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.util.Collection</OriginalElement>
+  <nodes>
+    <node x="520.895" y="416.0">java.lang.Cloneable</node>
+    <node x="378.1449999999999" y="104.0">java.util.Collection</node>
+    <node x="442.5825" y="312.0">java.util.AbstractList</node>
+    <node x="0.0" y="312.0">java.util.Deque</node>
+    <node x="112.89499999999992" y="416.0">java.util.AbstractSequentialList</node>
+    <node x="386.1449999999999" y="0.0">java.lang.Iterable</node>
+    <node x="613.7208333333333" y="530.0">java.util.ArrayList</node>
+    <node x="356.8949999999999" y="416.0">java.io.Serializable</node>
+    <node x="660.895" y="416.0">java.util.RandomAccess</node>
+    <node x="502.1449999999999" y="208.0">java.util.AbstractCollection</node>
+    <node x="402.1449999999999" y="208.0">java.util.List</node>
+    <node x="598.145" y="104.0">java.lang.Object</node>
+    <node x="0.0" y="208.0">java.util.Queue</node>
+    <node x="192.10666666666657" y="530.0">java.util.LinkedList</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.util.ArrayList" target="java.lang.Cloneable">
+      <point x="-24.0" y="-27.0" />
+      <point x="649.7208333333333" y="490.0" />
+      <point x="610.895" y="490.0" />
+      <point x="30.0" y="27.0" />
+    </edge>
+    <edge source="java.util.AbstractCollection" target="java.lang.Object">
+      <point x="48.0" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.ArrayList" target="java.io.Serializable">
+      <point x="-48.0" y="-27.0" />
+      <point x="625.7208333333333" y="500.0" />
+      <point x="464.8949999999999" y="500.0" />
+      <point x="36.0" y="27.0" />
+    </edge>
+    <edge source="java.util.AbstractSequentialList" target="java.util.AbstractList">
+      <point x="0.0" y="-27.0" />
+      <point x="224.89499999999992" y="391.0" />
+      <point x="478.5825" y="391.0" />
+      <point x="-36.0" y="27.0" />
+    </edge>
+    <edge source="java.util.LinkedList" target="java.util.Deque">
+      <point x="-51.19999999999993" y="-27.0" />
+      <point x="204.90666666666664" y="510.0" />
+      <point x="44.0" y="510.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.LinkedList" target="java.util.List">
+      <point x="-25.600000000000023" y="-27.0" />
+      <point x="230.50666666666655" y="500.0" />
+      <point x="102.39499999999992" y="500.0" />
+      <point x="102.39499999999992" y="292.0" />
+      <point x="415.47833333333324" y="292.0" />
+      <point x="-26.666666666666686" y="27.0" />
+    </edge>
+    <edge source="java.util.AbstractList" target="java.util.AbstractCollection">
+      <point x="36.0" y="-27.0" />
+      <point x="550.5825" y="292.0" />
+      <point x="598.145" y="292.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.Queue" target="java.util.Collection">
+      <point x="0.0" y="-27.0" />
+      <point x="44.0" y="183.0" />
+      <point x="399.47833333333324" y="183.0" />
+      <point x="-42.666666666666686" y="27.0" />
+    </edge>
+    <edge source="java.util.LinkedList" target="java.lang.Cloneable">
+      <point x="51.200000000000045" y="-27.0" />
+      <point x="307.3066666666666" y="510.0" />
+      <point x="550.895" y="510.0" />
+      <point x="-30.0" y="27.0" />
+    </edge>
+    <edge source="java.util.LinkedList" target="java.io.Serializable">
+      <point x="25.600000000000023" y="-27.0" />
+      <point x="281.7066666666666" y="500.0" />
+      <point x="392.8949999999999" y="500.0" />
+      <point x="-36.0" y="27.0" />
+    </edge>
+    <edge source="java.util.ArrayList" target="java.util.RandomAccess">
+      <point x="0.0" y="-27.0" />
+      <point x="673.7208333333333" y="490.0" />
+      <point x="732.895" y="490.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.List" target="java.util.Collection">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.Deque" target="java.util.Queue">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.AbstractList" target="java.util.List">
+      <point x="-36.0" y="-27.0" />
+      <point x="478.5825" y="292.0" />
+      <point x="442.1449999999999" y="292.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.Collection" target="java.lang.Iterable">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.ArrayList" target="java.util.List">
+      <point x="48.0" y="-27.0" />
+      <point x="721.7208333333333" y="510.0" />
+      <point x="844.145" y="510.0" />
+      <point x="844.145" y="282.0" />
+      <point x="468.8116666666666" y="282.0" />
+      <point x="26.666666666666686" y="27.0" />
+    </edge>
+    <edge source="java.util.LinkedList" target="java.util.AbstractSequentialList">
+      <point x="0.0" y="-27.0" />
+      <point x="256.10666666666657" y="490.0" />
+      <point x="224.89499999999992" y="490.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.ArrayList" target="java.util.AbstractList">
+      <point x="24.0" y="-27.0" />
+      <point x="697.7208333333333" y="500.0" />
+      <point x="815.395" y="500.0" />
+      <point x="815.395" y="391.0" />
+      <point x="550.5825" y="391.0" />
+      <point x="36.0" y="27.0" />
+    </edge>
+    <edge source="java.util.AbstractCollection" target="java.util.Collection">
+      <point x="-48.0" y="-27.0" />
+      <point x="550.145" y="183.0" />
+      <point x="484.8116666666666" y="183.0" />
+      <point x="42.666666666666686" y="27.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="422.5" y="292.0" />
+  <SelectedNodes>
+    <node>java.util.Collection</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

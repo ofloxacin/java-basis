@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.util.HashMap</OriginalElement>
+  <nodes>
+    <node x="300.92361111111114" y="322.0">java.util.LinkedHashMap</node>
+    <node x="150.50000000000003" y="114.0">java.util.AbstractMap</node>
+    <node x="10.5" y="114.0">java.lang.Cloneable</node>
+    <node x="495.90972222222223" y="0.0">java.util.Map</node>
+    <node x="318.0902777777778" y="218.0">java.util.concurrent.ConcurrentHashMap</node>
+    <node x="99.76388888888891" y="218.0">java.util.HashMap</node>
+    <node x="96.75694444444446" y="0.0">java.lang.Object</node>
+    <node x="470.5" y="114.0">java.util.concurrent.ConcurrentMap</node>
+    <node x="306.5" y="114.0">java.io.Serializable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.util.HashMap" target="java.util.Map">
+      <point x="-39.0" y="-27.0" />
+      <point x="112.76388888888891" y="198.0" />
+      <point x="0.0" y="198.0" />
+      <point x="0.0" y="84.0" />
+      <point x="504.90972222222223" y="84.0" />
+      <point x="-27.0" y="27.0" />
+    </edge>
+    <edge source="java.util.concurrent.ConcurrentMap" target="java.util.Map">
+      <point x="0.0" y="-27.0" />
+      <point x="546.5" y="94.0" />
+      <point x="540.9097222222222" y="94.0" />
+      <point x="9.0" y="27.0" />
+    </edge>
+    <edge source="java.util.HashMap" target="java.util.AbstractMap">
+      <point x="13.0" y="-27.0" />
+      <point x="164.7638888888889" y="198.0" />
+      <point x="184.50000000000003" y="198.0" />
+      <point x="-34.0" y="27.0" />
+    </edge>
+    <edge source="java.util.AbstractMap" target="java.lang.Object">
+      <point x="-34.0" y="-27.0" />
+      <point x="184.50000000000003" y="74.0" />
+      <point x="144.75694444444446" y="74.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.LinkedHashMap" target="java.util.Map">
+      <point x="38.0" y="-27.0" />
+      <point x="414.92361111111114" y="297.0" />
+      <point x="633.0" y="297.0" />
+      <point x="633.0" y="94.0" />
+      <point x="558.9097222222222" y="94.0" />
+      <point x="27.0" y="27.0" />
+    </edge>
+    <edge source="java.util.concurrent.ConcurrentHashMap" target="java.util.concurrent.ConcurrentMap">
+      <point x="61.333333333333314" y="-27.0" />
+      <point x="471.42361111111114" y="198.0" />
+      <point x="546.5" y="198.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.HashMap" target="java.lang.Cloneable">
+      <point x="-13.0" y="-27.0" />
+      <point x="138.7638888888889" y="188.0" />
+      <point x="70.5" y="188.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.concurrent.ConcurrentHashMap" target="java.io.Serializable">
+      <point x="0.0" y="-27.0" />
+      <point x="410.0902777777778" y="198.0" />
+      <point x="414.5" y="198.0" />
+      <point x="36.0" y="27.0" />
+    </edge>
+    <edge source="java.util.AbstractMap" target="java.util.Map">
+      <point x="34.0" y="-27.0" />
+      <point x="252.50000000000003" y="94.0" />
+      <point x="522.9097222222222" y="94.0" />
+      <point x="-9.0" y="27.0" />
+    </edge>
+    <edge source="java.util.HashMap" target="java.io.Serializable">
+      <point x="39.0" y="-27.0" />
+      <point x="190.7638888888889" y="198.0" />
+      <point x="342.5" y="198.0" />
+      <point x="-36.0" y="27.0" />
+    </edge>
+    <edge source="java.util.concurrent.ConcurrentHashMap" target="java.util.AbstractMap">
+      <point x="-61.33333333333337" y="-27.0" />
+      <point x="348.75694444444446" y="188.0" />
+      <point x="252.50000000000003" y="188.0" />
+      <point x="34.0" y="27.0" />
+    </edge>
+    <edge source="java.util.LinkedHashMap" target="java.util.HashMap">
+      <point x="-38.0" y="-27.0" />
+      <point x="338.92361111111114" y="297.0" />
+      <point x="151.7638888888889" y="297.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="316.5" y="188.0" />
+  <SelectedNodes>
+    <node>java.util.concurrent.ConcurrentMap</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

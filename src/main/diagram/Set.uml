@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.util.Set</OriginalElement>
+  <nodes>
+    <node x="224.95" y="416.0">java.util.HashSet</node>
+    <node x="102.0" y="208.0">java.util.AbstractCollection</node>
+    <node x="358.95" y="312.0">java.lang.Cloneable</node>
+    <node x="266.8833333333333" y="104.0">java.util.Collection</node>
+    <node x="163.99999999999997" y="312.0">java.util.AbstractSet</node>
+    <node x="326.8833333333333" y="208.0">java.util.Set</node>
+    <node x="102.00000000000006" y="104.0">java.lang.Object</node>
+    <node x="251.99999999999997" y="520.0">java.util.LinkedHashSet</node>
+    <node x="274.8833333333333" y="0.0">java.lang.Iterable</node>
+    <node x="0.0" y="312.0">java.io.Serializable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.util.HashSet" target="java.util.AbstractSet">
+      <point x="-13.0" y="-27.0" />
+      <point x="263.95" y="386.0" />
+      <point x="231.99999999999997" y="386.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.HashSet" target="java.util.Set">
+      <point x="13.0" y="-27.0" />
+      <point x="289.95" y="386.0" />
+      <point x="348.45" y="386.0" />
+      <point x="348.45" y="287.0" />
+      <point x="362.8833333333333" y="287.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.AbstractCollection" target="java.lang.Object">
+      <point x="-47.99999999999997" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.LinkedHashSet" target="java.lang.Cloneable">
+      <point x="19.0" y="-27.0" />
+      <point x="347.0" y="490.0" />
+      <point x="448.95" y="490.0" />
+      <point x="30.0" y="27.0" />
+    </edge>
+    <edge source="java.util.HashSet" target="java.lang.Cloneable">
+      <point x="39.0" y="-27.0" />
+      <point x="315.95" y="396.0" />
+      <point x="388.95" y="396.0" />
+      <point x="-30.0" y="27.0" />
+    </edge>
+    <edge source="java.util.LinkedHashSet" target="java.util.Set">
+      <point x="56.99999999999999" y="-27.0" />
+      <point x="385.0" y="500.0" />
+      <point x="489.45" y="500.0" />
+      <point x="489.45" y="287.0" />
+      <point x="386.8833333333333" y="287.0" />
+      <point x="24.0" y="27.0" />
+    </edge>
+    <edge source="java.util.Set" target="java.util.Collection">
+      <point x="0.0" y="-27.0" />
+      <point x="32.0" y="27.0" />
+    </edge>
+    <edge source="java.util.LinkedHashSet" target="java.io.Serializable">
+      <point x="-57.0" y="-27.0" />
+      <point x="271.0" y="500.0" />
+      <point x="36.0" y="500.0" />
+      <point x="-36.0" y="27.0" />
+    </edge>
+    <edge source="java.util.Collection" target="java.lang.Iterable">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.LinkedHashSet" target="java.util.HashSet">
+      <point x="-19.0" y="-27.0" />
+      <point x="309.0" y="500.0" />
+      <point x="276.95" y="500.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.util.AbstractSet" target="java.util.Set">
+      <point x="34.00000000000003" y="-27.0" />
+      <point x="266.0" y="287.0" />
+      <point x="338.8833333333333" y="287.0" />
+      <point x="-24.0" y="27.0" />
+    </edge>
+    <edge source="java.util.AbstractCollection" target="java.util.Collection">
+      <point x="48.00000000000003" y="-27.0" />
+      <point x="246.00000000000003" y="183.0" />
+      <point x="298.8833333333333" y="183.0" />
+      <point x="-32.0" y="27.0" />
+    </edge>
+    <edge source="java.util.HashSet" target="java.io.Serializable">
+      <point x="-39.0" y="-27.0" />
+      <point x="237.95" y="396.0" />
+      <point x="108.0" y="396.0" />
+      <point x="36.0" y="27.0" />
+    </edge>
+    <edge source="java.util.AbstractSet" target="java.util.AbstractCollection">
+      <point x="-33.99999999999997" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="245.0" y="287.0" />
+  <SelectedNodes>
+    <node>java.util.Set</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
