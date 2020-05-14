@@ -3,12 +3,67 @@
   <ID>JAVA</ID>
   <OriginalElement>java.lang.ClassLoader</OriginalElement>
   <nodes>
-    <node x="0.0" y="0.0">java.lang.ClassLoader</node>
+    <node x="164.0" y="208.0">java.security.SecureClassLoader</node>
+    <node x="90.0" y="312.0">java.net.URLClassLoader</node>
+    <node x="180.0" y="416.0">sun.misc.Launcher.ExtClassLoader</node>
+    <node x="24.0" y="208.0">java.io.Closeable</node>
+    <node x="344.0" y="104.0">sun.misc.Launcher</node>
+    <node x="280.0" y="0.0">java.lang.Object</node>
+    <node x="188.0" y="104.0">java.lang.ClassLoader</node>
+    <node x="8.0" y="104.0">java.lang.AutoCloseable</node>
+    <node x="0.0" y="416.0">sun.misc.Launcher.AppClassLoader</node>
   </nodes>
   <notes />
-  <edges />
-  <settings layout="Hierarchic Group" zoom="1.0" x="68.0" y="27.0" />
-  <SelectedNodes />
+  <edges>
+    <edge source="java.net.URLClassLoader" target="java.security.SecureClassLoader">
+      <point x="40.0" y="-27.0" />
+      <point x="210.0" y="287.0" />
+      <point x="256.0" y="287.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="sun.misc.Launcher" target="java.lang.Object">
+      <point x="0.0" y="-27.0" />
+      <point x="400.0" y="79.0" />
+      <point x="352.0" y="79.0" />
+      <point x="24.0" y="27.0" />
+    </edge>
+    <edge source="java.security.SecureClassLoader" target="java.lang.ClassLoader">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.net.URLClassLoader" target="java.io.Closeable">
+      <point x="-40.0" y="-27.0" />
+      <point x="130.0" y="287.0" />
+      <point x="84.0" y="287.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="sun.misc.Launcher.ExtClassLoader" target="java.net.URLClassLoader">
+      <point x="0.0" y="-27.0" />
+      <point x="260.0" y="391.0" />
+      <point x="210.0" y="391.0" />
+      <point x="40.0" y="27.0" />
+    </edge>
+    <edge source="java.lang.ClassLoader" target="java.lang.Object">
+      <point x="0.0" y="-27.0" />
+      <point x="256.0" y="79.0" />
+      <point x="304.0" y="79.0" />
+      <point x="-24.0" y="27.0" />
+    </edge>
+    <edge source="java.io.Closeable" target="java.lang.AutoCloseable">
+      <point x="0.0" y="-27.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="sun.misc.Launcher.AppClassLoader" target="java.net.URLClassLoader">
+      <point x="0.0" y="-27.0" />
+      <point x="80.0" y="391.0" />
+      <point x="130.0" y="391.0" />
+      <point x="-40.0" y="27.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="342.0" y="79.0" />
+  <SelectedNodes>
+    <node>sun.misc.Launcher.AppClassLoader</node>
+  </SelectedNodes>
   <Categories />
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
