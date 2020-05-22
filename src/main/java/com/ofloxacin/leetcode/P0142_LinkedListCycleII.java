@@ -1,6 +1,6 @@
 package com.ofloxacin.leetcode;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author chenshuai

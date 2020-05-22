@@ -1,7 +1,7 @@
 package com.ofloxacin.interview.bytedance;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ public class ByteDance_001 {
 
     private List<String> strings;
 
-    @Before
+    @BeforeAll
     public void init() {
         strings = new ArrayList<String>() {{
             add("aadbbcc");

@@ -1,7 +1,7 @@
 package com.ofloxacin.leetcode.interview.array;
 
 import com.ofloxacin.util.PrintUtil;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author chenshuai

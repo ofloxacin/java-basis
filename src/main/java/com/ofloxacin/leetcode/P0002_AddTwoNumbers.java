@@ -1,7 +1,7 @@
 package com.ofloxacin.leetcode;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author chenshuai
@@ -16,7 +16,7 @@ public class P0002_AddTwoNumbers {
 
     private ListNode l2;
 
-    @Before
+    @BeforeEach
     public void init() {
         l1 = new ListNode(1);
         l1.next = new ListNode(2);

@@ -1,7 +1,7 @@
 package com.ofloxacin.leetcode;
 
 import com.ofloxacin.util.PrintUtil;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Comparator;
 import java.util.HashMap;
