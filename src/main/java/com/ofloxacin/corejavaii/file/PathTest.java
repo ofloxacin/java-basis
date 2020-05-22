@@ -15,9 +15,9 @@ public class PathTest {
 
     public static void main(String[] args) {
         Path path = Paths.get("D:\\temp\\weather\\summer");
-        PrintUtil.print(path.resolve("session"));
-        PrintUtil.print(path.resolveSibling("winter"));
-        PrintUtil.print(path.relativize(Paths.get("D:\\temp\\weather\\spring")));
+        PrintUtil.println(path.resolve("session"));
+        PrintUtil.println(path.resolveSibling("winter"));
+        PrintUtil.println(path.relativize(Paths.get("D:\\temp\\weather\\spring")));
         try {
             Files.createDirectories(path);
         } catch (IOException e) {

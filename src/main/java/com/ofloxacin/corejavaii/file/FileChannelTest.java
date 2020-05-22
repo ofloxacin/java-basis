@@ -25,7 +25,7 @@ public class FileChannelTest {
         Path path = Paths.get("C:\\Program Files\\Java\\jdk1.8.0_191\\jre\\lib\\charsets.jar");
         TimeSpanUtil.init();
 
-        PrintUtil.print(Long.toHexString(checksumInputSteam(path)));
+        PrintUtil.println(Long.toHexString(checksumInputSteam(path)));
         TimeSpanUtil.printSpan("input stream");
 
         PrintUtil.printString(Long.toHexString(checksumBuffedInputSteam(path)));

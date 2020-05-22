@@ -18,8 +18,8 @@ public class P0347_TopKFrequentElements {
 
     @Test
     public void test() {
-        PrintUtil.print(topKFrequent(new int[]{1, 1, 1, 2, 2, 3}, 2));
-        PrintUtil.print(topKFrequent(new int[]{1}, 1));
+        PrintUtil.println(topKFrequent(new int[]{1, 1, 1, 2, 2, 3}, 2));
+        PrintUtil.println(topKFrequent(new int[]{1}, 1));
     }
 
     public int[] topKFrequent(int[] nums, int k) {

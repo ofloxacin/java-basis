@@ -24,17 +24,17 @@ public class URLConnectionTest {
         connection.setRequestProperty("Authorization", "Basic " + encoding);
         connection.connect();
 
-        PrintUtil.print(connection.getContentEncoding());
-        PrintUtil.print(connection.getContentType());
-        PrintUtil.print(connection.getContentLength());
-        PrintUtil.print(connection.getExpiration());
+        PrintUtil.println(connection.getContentEncoding());
+        PrintUtil.println(connection.getContentType());
+        PrintUtil.println(connection.getContentLength());
+        PrintUtil.println(connection.getExpiration());
 
         PrintUtil.printJson(connection.getPermission());
         PrintUtil.printJson(connection.getHeaderFields());
 
         Scanner scanner = new Scanner(connection.getInputStream());
         while (scanner.hasNextLine()) {
-            PrintUtil.print(scanner.nextLine());
+            PrintUtil.println(scanner.nextLine());
         }
     }
 

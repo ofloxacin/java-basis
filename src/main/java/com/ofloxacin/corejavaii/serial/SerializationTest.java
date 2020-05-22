@@ -33,8 +33,8 @@ public class SerializationTest implements Serializable {
         ByteArrayInputStream inputStream = new ByteArrayInputStream(outputStream.toByteArray());
         ObjectInputStream objectInputStream = new ObjectInputStream(inputStream);
         SerializationTest o = (SerializationTest) objectInputStream.readObject();
-        PrintUtil.print(o.name);
-        PrintUtil.print(o.point);
+        PrintUtil.println(o.name);
+        PrintUtil.println(o.point);
     }
 
     private void writeObject(ObjectOutputStream out) throws IOException {

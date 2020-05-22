@@ -15,7 +15,7 @@ public class P0283_MoveZeroes {
     public void test() {
         int[] nums1 = new int[]{0, 1, 0, 3, 12};
         moveZeroes(nums1);
-        PrintUtil.print(nums1);
+        PrintUtil.println(nums1);
     }
 
     public void moveZeroes(int[] nums) {

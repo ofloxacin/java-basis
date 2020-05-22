@@ -11,19 +11,25 @@ import java.util.stream.Collectors;
  */
 public class PrintUtil {
 
-    public static void print(Object o) {
+    public static void println(Object o) {
         String s = o == null ? "null" : o.toString();
         System.out.println(s);
     }
 
     public static void print(int[] nums) {
-        System.out.println(Arrays.stream(nums).mapToObj(Integer::toString).collect(Collectors.joining(",", "[", "]")));
+        System.out.print(Arrays.stream(nums).mapToObj(Integer::toString).collect(Collectors.joining(",", "[", "]")));
     }
 
-    public static void print(int[][] nums) {
+    public static void println(int[] nums) {
+        print(nums);
+        System.out.println();
+    }
+
+    public static void println(int[][] nums) {
         for (int[] num : nums) {
             print(num);
         }
+        System.out.println();
     }
 
     public static void printString(String s) {

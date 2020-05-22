@@ -17,8 +17,8 @@ public class P0189_Rotate {
         int[] nums2 = new int[]{-1, -100, 3, 99};
         rotate(nums, 3);
         rotate(nums2, 2);
-        PrintUtil.print(nums);
-        PrintUtil.print(nums2);
+        PrintUtil.println(nums);
+        PrintUtil.println(nums2);
     }
 
     public void rotate(int[] nums, int k) {

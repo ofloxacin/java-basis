@@ -19,6 +19,6 @@ public class FileLockTest {
         Path path = Paths.get("D:\\Library\\Desktop\\t.txt");
         FileChannel channel = FileChannel.open(path, StandardOpenOption.READ, StandardOpenOption.WRITE);
         FileLock fileLock = channel.lock(0, channel.size(), true);
-        PrintUtil.print(fileLock.isShared());
+        PrintUtil.println(fileLock.isShared());
     }
 }

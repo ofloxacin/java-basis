@@ -13,8 +13,8 @@ public class P0066_PlusOne {
 
     @Test
     public void test() {
-        PrintUtil.print(plusOne(new int[]{1, 2, 3}));
-        PrintUtil.print(plusOne(new int[]{4, 3, 2, 1}));
+        PrintUtil.println(plusOne(new int[]{1, 2, 3}));
+        PrintUtil.println(plusOne(new int[]{4, 3, 2, 1}));
     }
 
     public int[] plusOne(int[] digits) {

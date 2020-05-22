@@ -17,8 +17,8 @@ public class P0048_Rotate {
         int[][] matrix2 = new int[][]{{5, 1, 9, 11}, {2, 4, 8, 10}, {13, 3, 6, 7}, {15, 14, 12, 16}};
         rotate(matrix1);
         rotate(matrix2);
-        PrintUtil.print(matrix1);
-        PrintUtil.print(matrix2);
+        PrintUtil.println(matrix1);
+        PrintUtil.println(matrix2);
     }
 
     public void rotate(int[][] matrix) {
