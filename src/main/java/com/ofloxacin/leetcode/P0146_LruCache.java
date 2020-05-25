@@ -141,10 +141,6 @@ public class P0146_LruCache {
                 this.key = key;
                 this.value = value;
             }
-
-            public int getValue() {
-                return value;
-            }
         }
     }
 }
