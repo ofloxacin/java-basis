@@ -59,9 +59,9 @@ public class P0146_LruCache {
 
         private final Map<Integer, Node> cache = new HashMap<>();
 
-        private final Node head = new Node(null, null, NONE, NONE);
+        private final Node head = new Node();
 
-        private final Node tail = new Node(null, null, NONE, NONE);
+        private final Node tail = new Node();
 
         private static final int NONE = -1;
 
@@ -79,7 +79,7 @@ public class P0146_LruCache {
             if (node == null) {
                 return NONE;
             }
-            moveToTop(node);
+            moveToHead(node);
             return node.value;
         }
 
@@ -87,16 +87,11 @@ public class P0146_LruCache {
             Node old = cache.get(key);
             if (old != null) {
                 old.value = value;
-                moveToTop(old);
+                moveToHead(old);
                 return;
             }
             if (cache.size() == capacity) {
-                Node temp = tail.pre;
-                temp.pre.next = temp.next;
-                temp.next.pre = temp.pre;
-                temp.pre = null;
-                temp.next = null;
-                cache.remove(temp.key);
+                cache.remove(removeTail());
             }
             Node node = new Node(head, head.next, key, value);
             head.next.pre = node;
@@ -104,7 +99,7 @@ public class P0146_LruCache {
             cache.put(key, node);
         }
 
-        private void moveToTop(Node node) {
+        private void moveToHead(Node node) {
             if (node == head.next) {
                 return;
             }
@@ -117,6 +112,15 @@ public class P0146_LruCache {
             head.next = node;
         }
 
+        private int removeTail() {
+            Node temp = tail.pre;
+            temp.pre.next = temp.next;
+            temp.next.pre = temp.pre;
+            temp.pre = null;
+            temp.next = null;
+            return temp.key;
+        }
+
         class Node {
 
             Node pre;
@@ -126,6 +130,10 @@ public class P0146_LruCache {
             int key;
 
             int value;
+
+            Node() {
+
+            }
 
             Node(Node pre, Node next, int key, int value) {
                 this.pre = pre;
