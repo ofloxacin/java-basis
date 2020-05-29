@@ -89,6 +89,17 @@ public class SortTest {
     }
 
     /**
+     * 计数排序
+     */
+    @Test
+    @DisplayName("Counting Sort")
+    public void countingSort() {
+        nums = new int[]{35, 3, 6, 12, 3, 35, 78, 5, 25, 99, 1, 3, 2, 5, 5, 3, 4};
+        CountingSort countingSort = new CountingSort();
+        countingSort.sort(nums, 100);
+    }
+
+    /**
      * 初始化待排序数据
      */
     @BeforeEach
@@ -112,7 +123,7 @@ public class SortTest {
     @AfterEach
     public void valid(TestInfo testInfo) {
         TimeSpanUtil.printSpan(testInfo.getDisplayName());
-        for (int i = 0; i < COUNT - 1; i++) {
+        for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] > nums[i + 1]) {
                 System.out.println(nums[i]);
                 System.out.println(nums[i + 1]);
