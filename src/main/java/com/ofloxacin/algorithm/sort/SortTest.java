@@ -29,7 +29,7 @@ public class SortTest {
 
     private static int[] cache;
 
-    private final static int COUNT = 100;
+    private final static int COUNT = 10000;
 
     private final static Comparator<Integer> COMPARATOR = Comparator.comparingInt(o -> o);
 
@@ -143,10 +143,10 @@ public class SortTest {
     @BeforeEach
     public void init() {
         if (cache == null) {
-            Random random = new Random(COUNT);
+            Random random = new Random();
             cache = new int[COUNT];
             for (int i = 0; i < COUNT; i++) {
-                cache[i] = random.nextInt() % 100;
+                cache[i] = random.nextInt() % COUNT;
             }
         }
         nums = Arrays.copyOf(cache, COUNT);
