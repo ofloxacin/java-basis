@@ -17,11 +17,19 @@ public class PrintUtil {
     }
 
     public static void print(int[] nums) {
-        System.out.print(Arrays.stream(nums).mapToObj(Integer::toString).collect(Collectors.joining(",", "[", "]")));
+        print(nums, 0, nums.length);
+    }
+
+    public static void print(int[] nums, int start, int end) {
+        System.out.print(Arrays.stream(nums, start, end).mapToObj(Integer::toString).collect(Collectors.joining(",", "[", "]")));
     }
 
     public static void println(int[] nums) {
-        print(nums);
+        println(nums, 0, nums.length);
+    }
+
+    public static void println(int[] nums, int start, int end) {
+        print(nums, start, end);
         System.out.println();
     }
 

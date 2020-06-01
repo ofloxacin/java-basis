@@ -1,9 +1,11 @@
 package com.ofloxacin.algorithm.sort;
 
 import com.ofloxacin.TimeSpanUtil;
+import com.ofloxacin.util.PrintUtil;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
@@ -11,6 +13,7 @@ import org.junit.jupiter.api.TestInfo;
 import org.junit.jupiter.api.TestMethodOrder;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Random;
 
 /**
@@ -24,9 +27,11 @@ public class SortTest {
 
     private int[] nums;
 
-    private int[] cache;
+    private static int[] cache;
 
-    private final static int COUNT = 10000;
+    private final static int COUNT = 100;
+
+    private final static Comparator<Integer> COMPARATOR = Comparator.comparingInt(o -> o);
 
     /**
      * 冒泡排序
@@ -35,7 +40,7 @@ public class SortTest {
     @DisplayName("Bubble Sort")
     public void bubbleSort() {
         Sort sort = new BubbleSort();
-        sort.sort(nums);
+        sort.sort(nums, COMPARATOR);
     }
 
     /**
@@ -45,7 +50,7 @@ public class SortTest {
     @DisplayName("Selection Sort")
     public void selectionSort() {
         Sort sort = new SelectionSort();
-        sort.sort(nums);
+        sort.sort(nums, COMPARATOR);
     }
 
     /**
@@ -55,7 +60,7 @@ public class SortTest {
     @DisplayName("Insertion Sort")
     public void insertionSort() {
         Sort sort = new InsertionSort();
-        sort.sort(nums);
+        sort.sort(nums, COMPARATOR);
     }
 
     /**
@@ -65,7 +70,7 @@ public class SortTest {
     @DisplayName("Quick Sort")
     public void quickSort() {
         Sort sort = new QuickSort();
-        sort.sort(nums);
+        sort.sort(nums, COMPARATOR);
     }
 
     /**
@@ -75,7 +80,7 @@ public class SortTest {
     @DisplayName("MergeSort")
     public void mergeSort() {
         Sort sort = new MergeSort();
-        sort.sort(nums);
+        sort.sort(nums, COMPARATOR);
     }
 
     /**
@@ -85,7 +90,7 @@ public class SortTest {
     @DisplayName("HeapSort")
     public void heapSort() {
         Sort sort = new HeapSort();
-        sort.sort(nums);
+        sort.sort(nums, COMPARATOR);
     }
 
     /**
@@ -94,9 +99,42 @@ public class SortTest {
     @Test
     @DisplayName("Counting Sort")
     public void countingSort() {
-        nums = new int[]{35, 3, 6, 12, 3, 35, 78, 5, 25, 99, 1, 3, 2, 5, 5, 3, 4};
+        nums = new int[]{10, 3, 6, 12, 3, 15, 20, 5, 14, 13, 1, 3, 2, 5, 5, 3, 4};
         CountingSort countingSort = new CountingSort();
-        countingSort.sort(nums, 100);
+        countingSort.sort(nums, 100, COMPARATOR);
+    }
+
+    /**
+     * 桶排序
+     */
+    @Disabled("TDB")
+    @Test
+    @DisplayName("Bucket Sort")
+    public void bucketSort() {
+        Sort sort = new BucketSort();
+        sort.sort(nums, COMPARATOR);
+    }
+
+    /**
+     * 基数排序
+     */
+    @Disabled("TDB")
+    @Test
+    @DisplayName("Radix Sort")
+    public void radixSort() {
+        Sort sort = new RadixSort();
+        sort.sort(nums, COMPARATOR);
+    }
+
+    /**
+     * 希尔排序
+     */
+    @Disabled("TDB")
+    @Test
+    @DisplayName("Shell Sort")
+    public void shellSort() {
+        Sort sort = new ShellSort();
+        sort.sort(nums, COMPARATOR);
     }
 
     /**
@@ -108,7 +146,7 @@ public class SortTest {
             Random random = new Random(COUNT);
             cache = new int[COUNT];
             for (int i = 0; i < COUNT; i++) {
-                cache[i] = random.nextInt();
+                cache[i] = random.nextInt() % 100;
             }
         }
         nums = Arrays.copyOf(cache, COUNT);
@@ -123,8 +161,9 @@ public class SortTest {
     @AfterEach
     public void valid(TestInfo testInfo) {
         TimeSpanUtil.printSpan(testInfo.getDisplayName());
+        PrintUtil.println(nums, 0, 10);
         for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i] > nums[i + 1]) {
+            if (COMPARATOR.compare(nums[i], nums[i + 1]) > 0) {
                 System.out.println(nums[i]);
                 System.out.println(nums[i + 1]);
                 Assertions.fail();
