@@ -19,7 +19,7 @@ public class MergeSort implements Sort {
         if ((end - start) < 2) {
             return;
         }
-        int mid = (start + end) / 2;
+        int mid = start + (end - start) / 2;
         mergeSort(nums, start, mid, comparator);
         mergeSort(nums, mid, end, comparator);
         merge(nums, start, mid, end, comparator);

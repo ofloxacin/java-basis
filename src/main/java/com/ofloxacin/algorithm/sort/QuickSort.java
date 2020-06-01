@@ -16,20 +16,12 @@ public class QuickSort implements Sort {
     }
 
     private void sort(int[] nums, int left, int right, Comparator<Integer> comparator) {
-        if (left > right) {
-            return;
-        }
+        if (left > right) return;
         int i = left, j = right;
         while (i < j) {
-            while (i < j && comparator.compare(nums[j], nums[left]) >= 0) {
-                j--;
-            }
-            while (i < j && comparator.compare(nums[i], nums[left]) <= 0) {
-                i++;
-            }
-            if (i < j) {
-                swap(nums, i, j);
-            }
+            while (i < j && comparator.compare(nums[j], nums[left]) >= 0) j--;
+            while (i < j && comparator.compare(nums[i], nums[left]) <= 0) i++;
+            if (i < j) swap(nums, i, j);
         }
         swap(nums, left, j);
         sort(nums, left, j - 1, comparator);
