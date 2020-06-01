@@ -1,6 +1,5 @@
 package com.ofloxacin.algorithm.sort;
 
-import java.util.Arrays;
 import java.util.Comparator;
 
 /**
@@ -13,36 +12,37 @@ public class MergeSort implements Sort {
 
     @Override
     public void sort(int[] nums, Comparator<Integer> comparator) {
-        int[] result = mergeSort(nums, comparator);
-        System.arraycopy(result, 0, nums, 0, result.length);
+        mergeSort(nums, 0, nums.length, comparator);
     }
 
-    private int[] mergeSort(int[] nums, Comparator<Integer> comparator) {
-        if (nums.length < 2) {
-            return nums;
+    private void mergeSort(int[] nums, int start, int end, Comparator<Integer> comparator) {
+        if ((end - start) < 2) {
+            return;
         }
-        int middle = nums.length / 2;
-        int[] numsL = Arrays.copyOf(nums, middle);
-        int[] numsR = Arrays.copyOfRange(nums, middle, nums.length);
-        return merge(mergeSort(numsL, comparator), mergeSort(numsR, comparator), comparator);
+        int mid = (start + end) / 2;
+        mergeSort(nums, start, mid, comparator);
+        mergeSort(nums, mid, end, comparator);
+        merge(nums, start, mid, end, comparator);
     }
 
-    private int[] merge(int[] numL, int[] numR, Comparator<Integer> comparator) {
-        int[] result = new int[numL.length + numR.length];
-        int i = 0, j = 0, k = 0;
-        while (i < numL.length && j < numR.length) {
-            if (comparator.compare(numL[i], numR[j]) <= 0) {
-                result[k++] = numL[i++];
+    private void merge(int[] nums, int start, int mid, int end, Comparator<Integer> comparator) {
+        int[] result = new int[end - start];
+        int i = start, j = mid, k = 0;
+        while (i < mid && j < end) {
+            if (comparator.compare(nums[i], nums[j]) <= 0) {
+                result[k++] = nums[i++];
             } else {
-                result[k++] = numR[j++];
+                result[k++] = nums[j++];
             }
         }
-        while (i < numL.length) {
-            result[k++] = numL[i++];
+        while (i < mid) {
+            result[k++] = nums[i++];
         }
-        while (j < numR.length) {
-            result[k++] = numR[j++];
+        while (j < end) {
+            result[k++] = nums[j++];
         }
-        return result;
+        for (int num : result) {
+            nums[start++] = num;
+        }
     }
 }
