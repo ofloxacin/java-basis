@@ -146,7 +146,7 @@ public class SortTest {
             Random random = new Random();
             cache = new int[COUNT];
             for (int i = 0; i < COUNT; i++) {
-                cache[i] = random.nextInt() % COUNT;
+                cache[i] = random.nextInt();
             }
         }
         nums = Arrays.copyOf(cache, COUNT);

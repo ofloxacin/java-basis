@@ -10,26 +10,22 @@ import java.util.Comparator;
  */
 public class HeapSort implements Sort {
 
-    private int len;
-
     @Override
     public void sort(int[] nums, Comparator<Integer> comparator) {
-        len = nums.length;
         buildHeap(nums, comparator);
         for (int i = nums.length - 1; i > 0; i--) {
             swap(nums, 0, i);
-            len--;
-            heapify(nums, 0, comparator);
+            heapify(nums, 0, i, comparator);
         }
     }
 
     private void buildHeap(int[] nums, Comparator<Integer> comparator) {
-        for (int i = len / 2; i >= 0; i--) {
-            heapify(nums, i, comparator);
+        for (int i = nums.length / 2 - 1; i >= 0; i--) {
+            heapify(nums, i, nums.length, comparator);
         }
     }
 
-    private void heapify(int[] nums, int i, Comparator<Integer> comparator) {
+    private void heapify(int[] nums, int i, int len, Comparator<Integer> comparator) {
         int left = 2 * i + 1;
         int right = 2 * i + 2;
         int target = i;
@@ -42,7 +38,7 @@ public class HeapSort implements Sort {
 
         if (target != i) {
             swap(nums, i, target);
-            heapify(nums, target, comparator);
+            heapify(nums, target, len, comparator);
         }
     }
 }
