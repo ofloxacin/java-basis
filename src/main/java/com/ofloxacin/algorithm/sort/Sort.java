@@ -1,7 +1,5 @@
 package com.ofloxacin.algorithm.sort;
 
-import java.util.Comparator;
-
 /**
  * @author chenshuai
  * @version 0.1
@@ -15,9 +13,7 @@ public interface Sort {
      *
      * @param nums
      */
-    default void sort(int[] nums) {
-        sort(nums, Comparator.comparingInt(o -> o));
-    }
+    void sort(int[] nums);
 
     /**
      * 交换数组元素
@@ -31,12 +27,4 @@ public interface Sort {
         nums[i] = nums[j];
         nums[j] = temp;
     }
-
-    /**
-     * 根据规则排序
-     *
-     * @param nums
-     * @param comparator
-     */
-    void sort(int[] nums, Comparator<Integer> comparator);
 }

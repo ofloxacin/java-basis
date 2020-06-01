@@ -1,7 +1,5 @@
 package com.ofloxacin.algorithm.sort;
 
-import java.util.Comparator;
-
 /**
  * @author chenshuai
  * @version 0.1
@@ -11,10 +9,10 @@ import java.util.Comparator;
 public class BubbleSort implements Sort {
 
     @Override
-    public void sort(int[] nums, Comparator<Integer> comparator) {
+    public void sort(int[] nums) {
         for (int i = 0; i < nums.length - 1; i++) {
             for (int j = 0; j < nums.length - 1 - i; j++) {
-                if (comparator.compare(nums[j], nums[j + 1]) > 0) {
+                if (nums[j] > nums[j + 1]) {
                     swap(nums, j, j + 1);
                 }
             }

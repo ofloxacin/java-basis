@@ -40,7 +40,7 @@ public class SortTest {
     @DisplayName("Bubble Sort")
     public void bubbleSort() {
         Sort sort = new BubbleSort();
-        sort.sort(nums, COMPARATOR);
+        sort.sort(nums);
     }
 
     /**
@@ -50,7 +50,7 @@ public class SortTest {
     @DisplayName("Selection Sort")
     public void selectionSort() {
         Sort sort = new SelectionSort();
-        sort.sort(nums, COMPARATOR);
+        sort.sort(nums);
     }
 
     /**
@@ -60,7 +60,7 @@ public class SortTest {
     @DisplayName("Insertion Sort")
     public void insertionSort() {
         Sort sort = new InsertionSort();
-        sort.sort(nums, COMPARATOR);
+        sort.sort(nums);
     }
 
     /**
@@ -70,7 +70,7 @@ public class SortTest {
     @DisplayName("Quick Sort")
     public void quickSort() {
         Sort sort = new QuickSort();
-        sort.sort(nums, COMPARATOR);
+        sort.sort(nums);
     }
 
     /**
@@ -80,7 +80,7 @@ public class SortTest {
     @DisplayName("MergeSort")
     public void mergeSort() {
         Sort sort = new MergeSort();
-        sort.sort(nums, COMPARATOR);
+        sort.sort(nums);
     }
 
     /**
@@ -90,7 +90,7 @@ public class SortTest {
     @DisplayName("HeapSort")
     public void heapSort() {
         Sort sort = new HeapSort();
-        sort.sort(nums, COMPARATOR);
+        sort.sort(nums);
     }
 
     /**
@@ -101,7 +101,7 @@ public class SortTest {
     public void countingSort() {
         nums = new int[]{10, 3, 6, 12, 3, 15, 20, 5, 14, 13, 1, 3, 2, 5, 5, 3, 4};
         CountingSort countingSort = new CountingSort();
-        countingSort.sort(nums, 100, COMPARATOR);
+        countingSort.sort(nums, 100);
     }
 
     /**
@@ -112,7 +112,7 @@ public class SortTest {
     @DisplayName("Bucket Sort")
     public void bucketSort() {
         Sort sort = new BucketSort();
-        sort.sort(nums, COMPARATOR);
+        sort.sort(nums);
     }
 
     /**
@@ -123,7 +123,7 @@ public class SortTest {
     @DisplayName("Radix Sort")
     public void radixSort() {
         Sort sort = new RadixSort();
-        sort.sort(nums, COMPARATOR);
+        sort.sort(nums);
     }
 
     /**
@@ -134,7 +134,7 @@ public class SortTest {
     @DisplayName("Shell Sort")
     public void shellSort() {
         Sort sort = new ShellSort();
-        sort.sort(nums, COMPARATOR);
+        sort.sort(nums);
     }
 
     /**

@@ -1,7 +1,5 @@
 package com.ofloxacin.algorithm.sort;
 
-import java.util.Comparator;
-
 /**
  * @author chenshuai
  * @version 0.1
@@ -11,23 +9,23 @@ import java.util.Comparator;
 public class MergeSort implements Sort {
 
     @Override
-    public void sort(int[] nums, Comparator<Integer> comparator) {
-        mergeSort(nums, 0, nums.length, comparator);
+    public void sort(int[] nums) {
+        mergeSort(nums, 0, nums.length);
     }
 
-    private void mergeSort(int[] nums, int start, int end, Comparator<Integer> comparator) {
+    private void mergeSort(int[] nums, int start, int end) {
         if ((end - start) < 2) return;
         int mid = start + (end - start) / 2;
-        mergeSort(nums, start, mid, comparator);
-        mergeSort(nums, mid, end, comparator);
-        merge(nums, start, mid, end, comparator);
+        mergeSort(nums, start, mid);
+        mergeSort(nums, mid, end);
+        merge(nums, start, mid, end);
     }
 
-    private void merge(int[] nums, int start, int mid, int end, Comparator<Integer> comparator) {
+    private void merge(int[] nums, int start, int mid, int end) {
         int[] result = new int[end - start];
         int i = start, j = mid, k = 0;
         while (i < mid && j < end) {
-            if (comparator.compare(nums[i], nums[j]) <= 0) {
+            if (nums[i] <= nums[j]) {
                 result[k++] = nums[i++];
             } else {
                 result[k++] = nums[j++];

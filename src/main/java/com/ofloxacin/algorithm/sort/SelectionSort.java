@@ -1,7 +1,5 @@
 package com.ofloxacin.algorithm.sort;
 
-import java.util.Comparator;
-
 /**
  * @author chenshuai
  * @version 0.1
@@ -11,11 +9,11 @@ import java.util.Comparator;
 public class SelectionSort implements Sort {
 
     @Override
-    public void sort(int[] nums, Comparator<Integer> comparator) {
+    public void sort(int[] nums) {
         for (int i = 0; i < nums.length - 1; i++) {
             int min = i;
             for (int j = i + 1; j < nums.length; j++) {
-                if (comparator.compare(nums[j], nums[min]) < 0) {
+                if (nums[j] < nums[min]) {
                     min = j;
                 }
             }

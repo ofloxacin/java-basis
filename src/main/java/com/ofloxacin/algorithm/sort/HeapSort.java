@@ -1,7 +1,5 @@
 package com.ofloxacin.algorithm.sort;
 
-import java.util.Comparator;
-
 /**
  * @author chenshuai
  * @version 0.1
@@ -11,34 +9,28 @@ import java.util.Comparator;
 public class HeapSort implements Sort {
 
     @Override
-    public void sort(int[] nums, Comparator<Integer> comparator) {
-        buildHeap(nums, comparator);
+    public void sort(int[] nums) {
+        buildHeap(nums);
         for (int i = nums.length - 1; i > 0; i--) {
             swap(nums, 0, i);
-            heapify(nums, 0, i, comparator);
+            heapify(nums, 0, i);
         }
     }
 
-    private void buildHeap(int[] nums, Comparator<Integer> comparator) {
-        for (int i = nums.length / 2 - 1; i >= 0; i--) {
-            heapify(nums, i, nums.length, comparator);
-        }
+    private void buildHeap(int[] nums) {
+        for (int i = nums.length / 2 - 1; i >= 0; i--)
+            heapify(nums, i, nums.length);
     }
 
-    private void heapify(int[] nums, int i, int len, Comparator<Integer> comparator) {
+    private void heapify(int[] nums, int i, int len) {
         int left = 2 * i + 1;
         int right = 2 * i + 2;
         int target = i;
-        if (left < len && comparator.compare(nums[left], nums[target]) > 0) {
-            target = left;
-        }
-        if (right < len && comparator.compare(nums[right], nums[target]) > 0) {
-            target = right;
-        }
-
+        if (left < len && nums[left] > nums[target]) target = left;
+        if (right < len && nums[right] > nums[target]) target = right;
         if (target != i) {
             swap(nums, i, target);
-            heapify(nums, target, len, comparator);
+            heapify(nums, target, len);
         }
     }
 }

@@ -1,7 +1,5 @@
 package com.ofloxacin.algorithm.sort;
 
-import java.util.Comparator;
-
 /**
  * @author chenshuai
  * @version 0.1
@@ -11,7 +9,7 @@ import java.util.Comparator;
 public class RadixSort implements Sort {
 
     @Override
-    public void sort(int[] nums, Comparator<Integer> comparator) {
+    public void sort(int[] nums) {
 
     }
 }

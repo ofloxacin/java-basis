@@ -1,7 +1,5 @@
 package com.ofloxacin.algorithm.sort;
 
-import java.util.Comparator;
-
 /**
  * @author chenshuai
  * @version 0.1
@@ -11,20 +9,20 @@ import java.util.Comparator;
 public class QuickSort implements Sort {
 
     @Override
-    public void sort(int[] nums, Comparator<Integer> comparator) {
-        sort(nums, 0, nums.length - 1, comparator);
+    public void sort(int[] nums) {
+        sort(nums, 0, nums.length - 1);
     }
 
-    private void sort(int[] nums, int left, int right, Comparator<Integer> comparator) {
+    private void sort(int[] nums, int left, int right) {
         if (left > right) return;
         int i = left, j = right;
         while (i < j) {
-            while (i < j && comparator.compare(nums[j], nums[left]) >= 0) j--;
-            while (i < j && comparator.compare(nums[i], nums[left]) <= 0) i++;
+            while (i < j && nums[j] > nums[left]) j--;
+            while (i < j && nums[i] > nums[left]) i++;
             if (i < j) swap(nums, i, j);
         }
         swap(nums, left, j);
-        sort(nums, left, j - 1, comparator);
-        sort(nums, j + 1, right, comparator);
+        sort(nums, left, j - 1);
+        sort(nums, j + 1, right);
     }
 }
