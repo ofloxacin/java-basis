@@ -16,9 +16,7 @@ public class MergeSort implements Sort {
     }
 
     private void mergeSort(int[] nums, int start, int end, Comparator<Integer> comparator) {
-        if ((end - start) < 2) {
-            return;
-        }
+        if ((end - start) < 2) return;
         int mid = start + (end - start) / 2;
         mergeSort(nums, start, mid, comparator);
         mergeSort(nums, mid, end, comparator);
@@ -35,14 +33,8 @@ public class MergeSort implements Sort {
                 result[k++] = nums[j++];
             }
         }
-        while (i < mid) {
-            result[k++] = nums[i++];
-        }
-        while (j < end) {
-            result[k++] = nums[j++];
-        }
-        for (int num : result) {
-            nums[start++] = num;
-        }
+        while (i < mid) result[k++] = nums[i++];
+        while (j < end) result[k++] = nums[j++];
+        for (int num : result) nums[start++] = num;
     }
 }
