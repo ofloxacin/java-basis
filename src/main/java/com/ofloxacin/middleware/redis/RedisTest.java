@@ -1,4 +1,4 @@
-package com.ofloxacin.redis;
+package com.ofloxacin.middleware.redis;
 
 import redis.clients.jedis.Jedis;
 

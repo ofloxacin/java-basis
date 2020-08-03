@@ -23,9 +23,7 @@ public class HeapSort implements Sort {
     }
 
     private void heapify(int[] nums, int i, int len) {
-        int left = 2 * i + 1;
-        int right = 2 * i + 2;
-        int target = i;
+        int left = 2 * i + 1, right = 2 * i + 2, target = i;
         if (left < len && nums[left] > nums[target]) target = left;
         if (right < len && nums[right] > nums[target]) target = right;
         if (target != i) {

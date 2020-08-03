@@ -3,6 +3,8 @@ package com.ofloxacin.io;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * @author chenshuai
@@ -15,9 +17,10 @@ public class BIOTest {
     public static void main(String[] args) throws IOException {
         ThreadGroup group = new ThreadGroup("web-server");
         ServerSocket server = new ServerSocket(80);
+        ExecutorService executorService = Executors.newCachedThreadPool(r -> new Thread(group, r));
         while (true) {
             Socket socket = server.accept();
-            new Thread(group, new RequestHandler(socket)).start();
+            executorService.submit(new RequestHandler(socket));
         }
     }
 }
