@@ -1,4 +1,4 @@
-package com.ofloxacin.effective.lazySingleton;
+package com.ofloxacin.effective.dclSingleton;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 public class SingletonTest {
 
     @Test
-    public void enumSingleton() {
+    public void dclSingleton() {
         Singleton s1 = Singleton.getInstance();
         Singleton s2 = Singleton.getInstance();
         Assertions.assertEquals(s1, s2);
