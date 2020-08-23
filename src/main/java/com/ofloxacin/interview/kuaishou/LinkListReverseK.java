@@ -6,9 +6,9 @@ package com.ofloxacin.interview.kuaishou;
 public class LinkListReverseK {
 
     public static void main(String[] args) {
-        ListNode origin = gen(7);
+        ListNode origin = gen(20);
         print(origin);
-        ListNode reversed = reverseByK(origin, 1);
+        ListNode reversed = reverseByK(origin, 3);
         print(reversed);
     }
 
