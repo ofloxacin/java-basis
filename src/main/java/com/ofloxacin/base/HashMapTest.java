@@ -1,4 +1,4 @@
-package com.ofloxacin;
+package com.ofloxacin.base;
 
 import lombok.AllArgsConstructor;
 
@@ -28,7 +28,7 @@ public class HashMapTest {
     @AllArgsConstructor
     static class Node {
 
-        private int id;
+        private final int id;
 
         @Override
         public int hashCode() {

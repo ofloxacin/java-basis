@@ -44,13 +44,13 @@ public class P1116_PrintZeroEvenOdd {
 
     class ZeroEvenOdd {
 
-        private int n;
+        private final int n;
 
-        private Semaphore sZero = new Semaphore(1);
+        private final Semaphore sZero = new Semaphore(1);
 
-        private Semaphore sEven = new Semaphore(0);
+        private final Semaphore sEven = new Semaphore(0);
 
-        private Semaphore sOdd = new Semaphore(0);
+        private final Semaphore sOdd = new Semaphore(0);
 
         public ZeroEvenOdd(int n) {
             this.n = n;

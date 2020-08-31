@@ -50,9 +50,9 @@ public class P1117_BuildingH2o {
 
     class Solution1 implements Solution {
 
-        private Semaphore h = new Semaphore(2);
+        private final Semaphore h = new Semaphore(2);
 
-        private Semaphore o = new Semaphore(1);
+        private final Semaphore o = new Semaphore(1);
 
         private final Object lock = new Object();
 
@@ -89,13 +89,13 @@ public class P1117_BuildingH2o {
 
     class Solution2 implements Solution {
 
-        private Semaphore h = new Semaphore(2);
+        private final Semaphore h = new Semaphore(2);
 
-        private Semaphore o = new Semaphore(1);
+        private final Semaphore o = new Semaphore(1);
 
-        private Semaphore currentH = new Semaphore(0);
+        private final Semaphore currentH = new Semaphore(0);
 
-        private Semaphore currentO = new Semaphore(0);
+        private final Semaphore currentO = new Semaphore(0);
 
         @Override
         public void hydrogen(Runnable releaseHydrogen) throws InterruptedException {

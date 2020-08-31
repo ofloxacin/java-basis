@@ -65,7 +65,7 @@ class Base64OutputStream extends FilterOutputStream {
 
     private int i = 0;
 
-    private int[] inbuf = new int[3];
+    private final int[] inbuf = new int[3];
 
     public Base64OutputStream(OutputStream out) {
         super(out);

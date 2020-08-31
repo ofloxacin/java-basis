@@ -1,4 +1,4 @@
-package com.ofloxacin;
+package com.ofloxacin.concurrent.queue;
 
 import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  * @author ChenShuai
  * @date 2018/6/12 9:22
  */
-public class Main {
+public class CustomQueueTest {
 
     public static void main(String[] args) {
         final CustomQueue customQueue = new CustomQueue();

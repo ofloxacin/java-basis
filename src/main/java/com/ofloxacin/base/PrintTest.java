@@ -1,4 +1,4 @@
-package com.ofloxacin;
+package com.ofloxacin.base;
 
 /**
  * @author chens

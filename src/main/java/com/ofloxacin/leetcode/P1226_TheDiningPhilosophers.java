@@ -49,7 +49,7 @@ public class P1226_TheDiningPhilosophers {
      */
     class Solution1 implements Solution {
 
-        private Semaphore[] semaphores = new Semaphore[]{
+        private final Semaphore[] semaphores = new Semaphore[]{
                 new Semaphore(1),
                 new Semaphore(1),
                 new Semaphore(1),
@@ -87,7 +87,7 @@ public class P1226_TheDiningPhilosophers {
      */
     class Solution2 implements Solution {
 
-        private Semaphore[] semaphores = new Semaphore[]{
+        private final Semaphore[] semaphores = new Semaphore[]{
                 new Semaphore(1),
                 new Semaphore(1),
                 new Semaphore(1),
@@ -95,7 +95,7 @@ public class P1226_TheDiningPhilosophers {
                 new Semaphore(1)
         };
 
-        private Semaphore available = new Semaphore(4);
+        private final Semaphore available = new Semaphore(4);
 
         @Override
         public void wantsToEat(int philosopher,
@@ -125,7 +125,7 @@ public class P1226_TheDiningPhilosophers {
      */
     class Solution3 implements Solution {
 
-        private Semaphore[] semaphores = new Semaphore[]{
+        private final Semaphore[] semaphores = new Semaphore[]{
                 new Semaphore(1),
                 new Semaphore(1),
                 new Semaphore(1),
@@ -133,7 +133,7 @@ public class P1226_TheDiningPhilosophers {
                 new Semaphore(1)
         };
 
-        private Semaphore lock = new Semaphore(1);
+        private final Semaphore lock = new Semaphore(1);
 
         @Override
         public void wantsToEat(int philosopher,

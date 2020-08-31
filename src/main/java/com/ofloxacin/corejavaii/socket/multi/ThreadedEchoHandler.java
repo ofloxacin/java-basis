@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class ThreadedEchoHandler implements Runnable {
 
-    private Socket socket;
+    private final Socket socket;
 
     public ThreadedEchoHandler(Socket socket) {
         this.socket = socket;

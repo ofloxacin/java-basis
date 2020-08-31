@@ -11,7 +11,7 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class BlockingQueueTest {
 
-    private static ReentrantLock lock = new ReentrantLock(true);
+    private static final ReentrantLock lock = new ReentrantLock(true);
 
     public static void main(String[] args) {
         Condition notFull = lock.newCondition();

@@ -15,7 +15,7 @@ import java.net.Socket;
  */
 public class RequestHandler implements Runnable {
 
-    private Socket socket;
+    private final Socket socket;
 
     RequestHandler(Socket client) {
         this.socket = client;

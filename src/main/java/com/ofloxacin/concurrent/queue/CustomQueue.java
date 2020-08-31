@@ -1,4 +1,4 @@
-package com.ofloxacin;
+package com.ofloxacin.concurrent.queue;
 
 import java.util.Stack;
 
@@ -8,9 +8,9 @@ import java.util.Stack;
  */
 public class CustomQueue {
 
-    private Stack<Object> s1 = new Stack<Object>();
+    private final Stack<Object> s1 = new Stack<>();
 
-    private Stack<Object> s2 = new Stack<Object>();
+    private final Stack<Object> s2 = new Stack<>();
 
     public void add(Object o) {
         if (null != o) {

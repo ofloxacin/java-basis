@@ -52,15 +52,15 @@ public class P1195_FizzBuzzMultithreaded {
 
     class FizzBuzz {
 
-        private int n;
+        private final int n;
 
-        private Semaphore fizz = new Semaphore(0);
+        private final Semaphore fizz = new Semaphore(0);
 
-        private Semaphore buzz = new Semaphore(0);
+        private final Semaphore buzz = new Semaphore(0);
 
-        private Semaphore fizzbuzz = new Semaphore(0);
+        private final Semaphore fizzbuzz = new Semaphore(0);
 
-        private Semaphore number = new Semaphore(1);
+        private final Semaphore number = new Semaphore(1);
 
         public FizzBuzz(int n) {
             this.n = n;

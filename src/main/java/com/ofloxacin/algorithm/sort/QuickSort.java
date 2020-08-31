@@ -30,7 +30,7 @@ public class QuickSort implements Sort {
     }
 
     public static void main(String[] args) {
-        int nums[] = new int[]{5, 4, 3, 2, 1};
+        int[] nums = new int[]{5, 4, 3, 2, 1};
         new QuickSort().sort(nums);
         PrintUtil.print(nums);
     }

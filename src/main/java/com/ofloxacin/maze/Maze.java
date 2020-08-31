@@ -16,7 +16,7 @@ public class Maze {
     /**
      * 当前房间编号
      */
-    private int rootNumber = 0;
+    private final int rootNumber = 0;
 
     /**
      * 生成下一个房间编号
@@ -26,9 +26,9 @@ public class Maze {
     /**
      * 游戏中的房间
      */
-    private List<Room> rooms = new ArrayList<>();
+    private final List<Room> rooms = new ArrayList<>();
 
-    private Map<Cor, Room> roomMap = new HashMap<>();
+    private final Map<Cor, Room> roomMap = new HashMap<>();
 
     /**
      * 添加房间

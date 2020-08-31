@@ -16,7 +16,7 @@ public class Singleton {
     private enum SingletonEnum {
         INSTANCE;
 
-        private Singleton singleton;
+        private final Singleton singleton;
 
         SingletonEnum() {
             singleton = new Singleton();

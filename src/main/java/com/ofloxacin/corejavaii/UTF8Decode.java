@@ -27,7 +27,7 @@ public class UTF8Decode {
         List<Integer> results = new LinkedList<>();
         try {
             InputStream inputStream = new BufferedInputStream(new FileInputStream(file));
-            byte buffer[] = new byte[4];
+            byte[] buffer = new byte[4];
             while (inputStream.read(buffer, 0, 1) > 0) {
                 byte data = buffer[0];
                 byte count = getCount(data);
@@ -75,7 +75,7 @@ public class UTF8Decode {
     }
 
     private static byte[] toBit(byte b) {
-        byte result[] = new byte[8];
+        byte[] result = new byte[8];
         for (int i = 0; i < 7; i++) {
             result[i] = (byte) (b & 1);
             b = (byte) (b >> 1);

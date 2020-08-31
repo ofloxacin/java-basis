@@ -9,12 +9,12 @@ public class Room extends AbstractMapSide {
     /**
      * 房间编号
      */
-    private int roomNumber;
+    private final int roomNumber;
 
     /**
      * 四个方向
      */
-    private AbstractMapSide[] sides = new AbstractMapSide[4];
+    private final AbstractMapSide[] sides = new AbstractMapSide[4];
 
     /**
      * 初始化房间

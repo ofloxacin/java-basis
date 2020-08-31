@@ -69,9 +69,9 @@ public class P0155_MinStack {
 
     static class MinStack2 {
 
-        private Stack<Integer> data = new Stack<>();
+        private final Stack<Integer> data = new Stack<>();
 
-        private Stack<Integer> sort = new Stack<>();
+        private final Stack<Integer> sort = new Stack<>();
 
         public void push(int x) {
             data.push(x);
@@ -100,7 +100,7 @@ public class P0155_MinStack {
 
         private int min = Integer.MAX_VALUE;
 
-        private Stack<Integer> data = new Stack<>();
+        private final Stack<Integer> data = new Stack<>();
 
         public void push(int x) {
             if (x <= min) {

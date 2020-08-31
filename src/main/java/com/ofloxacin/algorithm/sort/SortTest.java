@@ -1,7 +1,7 @@
 package com.ofloxacin.algorithm.sort;
 
-import com.ofloxacin.TimeSpanUtil;
 import com.ofloxacin.util.PrintUtil;
+import com.ofloxacin.util.TimeSpanUtil;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

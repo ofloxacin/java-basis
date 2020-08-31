@@ -1,7 +1,7 @@
 package com.ofloxacin.corejavaii.file;
 
-import com.ofloxacin.TimeSpanUtil;
 import com.ofloxacin.util.PrintUtil;
+import com.ofloxacin.util.TimeSpanUtil;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;

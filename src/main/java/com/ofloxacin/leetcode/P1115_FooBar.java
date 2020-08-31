@@ -35,11 +35,11 @@ public class P1115_FooBar {
 
     class FooBar {
 
-        private int n;
+        private final int n;
 
-        private Semaphore foo = new Semaphore(1);
+        private final Semaphore foo = new Semaphore(1);
 
-        private Semaphore bar = new Semaphore(0);
+        private final Semaphore bar = new Semaphore(0);
 
         public FooBar(int n) {
             this.n = n;

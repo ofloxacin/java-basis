@@ -1,4 +1,4 @@
-package com.ofloxacin;
+package com.ofloxacin.concurrent.thread;
 
 /**
  * @author ChenShuai
@@ -6,9 +6,9 @@ package com.ofloxacin;
  */
 public class DeadLockDemo {
 
-    private static Object o1 = new Object();
+    private static final Object o1 = new Object();
 
-    private static Object o2 = new Object();
+    private static final Object o2 = new Object();
 
     public static void main(String[] args) {
         new DeadLockDemo().deadLock();

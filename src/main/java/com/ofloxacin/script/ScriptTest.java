@@ -1,6 +1,6 @@
 package com.ofloxacin.script;
 
-import com.ofloxacin.TimeSpanUtil;
+import com.ofloxacin.util.TimeSpanUtil;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
@@ -15,9 +15,9 @@ import java.util.Set;
  */
 public class ScriptTest {
 
-    private static ScriptEngine jse = new ScriptEngineManager().getEngineByName("JavaScript");
+    private static final ScriptEngine jse = new ScriptEngineManager().getEngineByName("JavaScript");
 
-    private static int MAX_COUNT = 10000;
+    private static final int MAX_COUNT = 10000;
 
     public static void main(String[] args) {
         TimeSpanUtil.init();

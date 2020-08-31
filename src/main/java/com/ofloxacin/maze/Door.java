@@ -9,12 +9,12 @@ public class Door extends AbstractMapSide {
     /**
      * 房间1
      */
-    private Room room1;
+    private final Room room1;
 
     /**
      * 房间2
      */
-    private Room room2;
+    private final Room room2;
 
     /**
      * 门是否已经开启

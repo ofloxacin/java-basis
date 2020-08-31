@@ -1,6 +1,6 @@
 package com.ofloxacin.structures;
 
-import com.ofloxacin.TimeSpanUtil;
+import com.ofloxacin.util.TimeSpanUtil;
 
 import java.util.HashMap;
 import java.util.Map;

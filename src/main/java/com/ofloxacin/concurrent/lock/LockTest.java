@@ -1,4 +1,4 @@
-package com.ofloxacin;
+package com.ofloxacin.concurrent.lock;
 
 import org.junit.jupiter.api.Test;
 

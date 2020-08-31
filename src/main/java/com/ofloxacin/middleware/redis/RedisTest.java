@@ -10,7 +10,7 @@ import java.util.Collections;
  */
 public class RedisTest {
 
-    private static Jedis jedis;
+    private static final Jedis jedis;
 
     static {
         jedis = new Jedis("localhost", 6379);

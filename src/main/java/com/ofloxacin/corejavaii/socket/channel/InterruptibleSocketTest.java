@@ -36,15 +36,15 @@ class InterruptibleSocketFrame extends JFrame {
 
     private Scanner in;
 
-    private JButton interruptibleButton;
+    private final JButton interruptibleButton;
 
-    private JButton blockingButton;
+    private final JButton blockingButton;
 
     private JButton cancelButton;
 
-    private JTextArea messages;
+    private final JTextArea messages;
 
-    private TestServer server;
+    private final TestServer server;
 
     private Thread connectThread;
 
@@ -156,7 +156,7 @@ class InterruptibleSocketFrame extends JFrame {
 
     class TestServerHandler implements Runnable {
 
-        private Socket incoming;
+        private final Socket incoming;
 
         private int counter;
 

@@ -1,4 +1,4 @@
-package com.ofloxacin;
+package com.ofloxacin.concurrent.thread;
 
 import java.util.ArrayList;
 import java.util.List;

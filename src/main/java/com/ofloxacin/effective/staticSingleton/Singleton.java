@@ -15,6 +15,6 @@ public class Singleton {
 
     private static class SingletonHolder {
 
-        private static Singleton singleton = new Singleton();
+        private static final Singleton singleton = new Singleton();
     }
 }

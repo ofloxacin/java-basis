@@ -12,9 +12,9 @@ public class Jd {
 
     private static int max = 0;
 
-    private static int n;
+    private static final int n;
 
-    private static List<List<Integer>> data = new ArrayList<>();
+    private static final List<List<Integer>> data = new ArrayList<>();
 
     static {
         data.add(Arrays.asList(1));

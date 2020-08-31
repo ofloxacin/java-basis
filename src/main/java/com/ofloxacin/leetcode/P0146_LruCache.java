@@ -32,7 +32,7 @@ public class P0146_LruCache {
 
     class LRUCache1 extends LinkedHashMap<Integer, Integer> {
 
-        private int capacity;
+        private final int capacity;
 
         public LRUCache1(int capacity) {
             super(capacity, 0.75F, true);

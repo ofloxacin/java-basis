@@ -1,4 +1,4 @@
-package com.ofloxacin;
+package com.ofloxacin.concurrent.thread;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.ThreadInfo;

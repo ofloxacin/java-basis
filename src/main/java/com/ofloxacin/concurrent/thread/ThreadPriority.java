@@ -1,4 +1,4 @@
-package com.ofloxacin;
+package com.ofloxacin.concurrent.thread;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class ThreadPriority {
 
     private class Job implements Runnable {
 
-        private int priority;
+        private final int priority;
 
         private long jobCount;
 

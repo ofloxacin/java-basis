@@ -1,4 +1,4 @@
-package com.ofloxacin;
+package com.ofloxacin.base;
 
 import java.io.Serializable;
 import java.util.Objects;

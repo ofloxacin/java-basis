@@ -21,6 +21,7 @@ public class P0014_LongestCommonPrefix {
         System.out.println(longestCommonPrefix(strs4));
         System.out.println(longestCommonPrefix(strs5));
     }
+
     public static String longestCommonPrefix(String[] strs) {
         if (strs.length == 0) {
             return "";
