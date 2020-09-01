@@ -1,6 +1,6 @@
 package com.ofloxacin.corejavaii.jdbc;
 
-import com.ofloxacin.util.NameUtil;
+import com.ofloxacin.util.RandomUtil;
 
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -15,7 +15,7 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class JDBCTest {
 
-    private static final int ROWS = 1001;
+    private static final int ROWS = 10_000_000;
 
     private static final ThreadLocalRandom random = ThreadLocalRandom.current();
 
@@ -25,14 +25,15 @@ public class JDBCTest {
         DriverManager.setLogWriter(printWriter);
         Connection connection = DriverManager.getConnection(url, "root", "root");
         connection.setAutoCommit(false);
-        PreparedStatement statement = connection.prepareStatement("INSERT INTO user(name,age,gender) VALUES (?,?,?)");
-        for (int i = 0; i < ROWS; i++) {
+        PreparedStatement statement = connection.prepareStatement("INSERT INTO user(name,age,gender,email) VALUES (?,?,?,?)");
+        for (int i = 1; i <= ROWS; i++) {
             int gender = random.nextInt(1, 3);
-            statement.setString(1, NameUtil.randomName(gender == 1));
+            statement.setString(1, RandomUtil.randomName(gender == 1));
             statement.setInt(2, random.nextInt(16, 40));
             statement.setInt(3, gender);
+            statement.setString(4, RandomUtil.randomEmail());
             statement.addBatch();
-            if (i % 1000 == 0) {
+            if (i % 100000 == 0) {
                 System.out.println(i);
                 statement.executeLargeBatch();
                 connection.commit();
