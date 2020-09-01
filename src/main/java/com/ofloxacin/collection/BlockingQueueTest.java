@@ -1,4 +1,4 @@
-package com.ofloxacin.collections;
+package com.ofloxacin.collection;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
