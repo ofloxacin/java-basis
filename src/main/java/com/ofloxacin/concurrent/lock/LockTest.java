@@ -2,6 +2,7 @@ package com.ofloxacin.concurrent.lock;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
@@ -16,6 +17,8 @@ public class LockTest {
     @Test
     public void testLock() {
         ReentrantLock lock = new ReentrantLock();
+        Condition condition = lock.newCondition();
+        condition.signal();
         lock.lock();
         lock.unlock();
     }
