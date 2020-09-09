@@ -10,8 +10,6 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class RandomUtil {
 
-    private final static ThreadLocalRandom random = ThreadLocalRandom.current();
-
     private final static String[] surname = {"赵", "钱", "孙", "李", "周", "吴", "郑", "王", "冯", "陈", "褚", "卫", "蒋", "沈", "韩", "杨",
             "朱", "秦", "尤", "许", "何", "吕", "施", "张", "孔", "曹", "严", "华", "金", "魏", "陶", "姜", "戚", "谢",
             "邹", "喻", "柏", "水", "窦", "章", "云", "苏", "潘", "葛", "奚", "范", "彭", "郎", "鲁", "韦", "昌", "马",
@@ -34,6 +32,7 @@ public class RandomUtil {
     private final static String[] domains = {"com", "cn", "net", "co", "org", "gov"};
 
     public static String randomName(boolean male) {
+        ThreadLocalRandom random = ThreadLocalRandom.current();
         String name = surname[random.nextInt(surname.length)];
         if (male) {
             int j = random.nextInt(boy.length() - 2);
@@ -54,6 +53,7 @@ public class RandomUtil {
     }
 
     public static String randomEmail() {
+        ThreadLocalRandom random = ThreadLocalRandom.current();
         int len = random.nextInt(10, 30);
         StringBuilder sb = new StringBuilder(len);
         while (len > 0) {
