@@ -25,10 +25,11 @@ public class Quna {
         List<Callable<Integer>> tasks = new ArrayList<>(4);
         for (int i = 0; i < 4; i++) {
             tasks.add(() -> {
+                ThreadLocalRandom random = ThreadLocalRandom.current();
                 latch.countDown();
                 while (!start) {
                 }
-                return ThreadLocalRandom.current().nextInt(10);
+                return random.nextInt(10);
             });
         }
         ExecutorService threadPool = Executors.newFixedThreadPool(4);
