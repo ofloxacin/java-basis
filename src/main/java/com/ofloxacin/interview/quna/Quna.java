@@ -25,7 +25,7 @@ public class Quna {
     private static volatile boolean start = false;
 
     public static void main(String[] args) {
-        test1();
+        test4();
     }
 
     public static void test1() {
@@ -128,6 +128,47 @@ public class Quna {
                 sum += future.get();
             } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
+            }
+        }
+        System.out.println(sum);
+        threadPool.shutdown();
+    }
+
+    public static void test4() {
+        ExecutorService threadPool = Executors.newFixedThreadPool(4);
+        CountDownLatch latch = new CountDownLatch(4);
+        List<Future<Integer>> futures = new ArrayList<>(4);
+        Object lock = new Object();
+        for (int i = 0; i < 4; i++) {
+            futures.add(threadPool.submit(() -> {
+                ThreadLocalRandom random = ThreadLocalRandom.current();
+                synchronized (lock) {
+                    try {
+                        System.out.println("lock wait");
+                        latch.countDown();
+                        lock.wait();
+                        System.out.println("doing");
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                return random.nextInt(10);
+            }));
+        }
+        try {
+            latch.await();
+        } catch (InterruptedException e) {
+
+        }
+        synchronized (lock) {
+            lock.notifyAll();
+        }
+        int sum = 0;
+        for (Future<Integer> future : futures) {
+            try {
+                sum += future.get();
+            } catch (InterruptedException | ExecutionException e) {
+
             }
         }
         System.out.println(sum);
