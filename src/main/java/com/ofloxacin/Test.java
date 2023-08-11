@@ -1,13 +1,17 @@
 package com.ofloxacin;
 
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
+
 /**
  * @author chens
  **/
 public class Test {
 
     public static void main(String[] args) {
-        new StringBuilder("adf").reverse().toString();
-        System.out.println(shortestPalindrome("abcd"));
+        long time = 1668061947;
+        Instant instant = Instant.ofEpochSecond(time).truncatedTo(ChronoUnit.DAYS);
+        System.out.println(instant.toEpochMilli() / 1000);
     }
 
     public static String shortestPalindrome(String s) {

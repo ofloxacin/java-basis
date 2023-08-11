@@ -1,4 +1,4 @@
-package com.ofloxacin;
+package com.ofloxacin.grammar;
 
 /**
  * @author chens

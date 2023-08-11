@@ -1,13 +1,7 @@
 package com.ofloxacin.corejavaii.file;
 
 import java.io.IOException;
-import java.nio.file.FileSystem;
-import java.nio.file.FileSystems;
-import java.nio.file.FileVisitResult;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.SimpleFileVisitor;
+import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 
 /**
@@ -18,7 +12,7 @@ public class ZipTest {
 
     public static void main(String[] args) {
         try {
-            FileSystem fileSystem = FileSystems.newFileSystem(Paths.get("D:\\_Setup\\Development\\apache-tomcat-8.5.32.zip"), null);
+            FileSystem fileSystem = FileSystems.newFileSystem(Paths.get("D:\\_Setup\\Development\\apache-tomcat-8.5.32.zip"));
             Files.walkFileTree(fileSystem.getPath("/"), new SimpleFileVisitor<Path>() {
                 @Override
                 public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
