@@ -6,8 +6,8 @@ import java.util.Arrays;
 
 public class AleoTest {
     public static void main(String[] args) throws NoSuchAlgorithmException {
-        byte[] bytes = sha256(new byte[]{1});
-        System.out.println(Arrays.toString(bytes));
+        Object[] result = Bech32.bech32ToSegwit("puzzle1sppa6r2qmn0g6hlh50rwkfz54cxgpxrczpsg3suw8l3wt5j8jnwg82gv4t60lz8z9t58heq5sgdgzf7fl0m");
+        System.out.println(Arrays.toString(result));
     }
 
     public static byte[] sha256(byte[] input) {
